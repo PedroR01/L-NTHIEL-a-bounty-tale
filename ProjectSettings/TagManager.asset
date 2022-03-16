@@ -11,11 +11,14 @@ TagManager:
   - Guardian
   - Archer
   - Officer
+  - Torch
+  - Door
+  - Prop
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostProcessing
   - Water
   - UI
   - Prop

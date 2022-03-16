@@ -33,16 +33,25 @@ public class Player_Stats : MonoBehaviour
     private float actualTimeStamina;
     private float staminaTimer;
 
+    [HideInInspector] public bool dead;
+
     private void Start()
     {
         pc = GetComponent<PlayerController>();
         gm.SetSkillTree(Game_Manager.mainSkillTree.Agility);
         SkillTreeStats();
         BasicStats();
+        dead = false;
     }
 
     private void Update()
     {
+        if (dead)
+            return;
+
+        if (actualLife <= 0)
+            Muerto();
+
         if (actualStamina < maxStamina)
             StartCoroutine(UpdateStamina());
 
@@ -125,22 +134,18 @@ public class Player_Stats : MonoBehaviour
         actualLife -= danioRecibido - armour / 2;
 
         // Animacion de recibir danio
-
-        if (actualLife <= 0)
-        {
-            Muerto();
-        }
     }
 
     private void Heal()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            actualLife -= 10;
+            //actualLife -= 10;
+            actualLife = 0f;
         }
 
         if (actualLife < maxLife)
-            TimeWithoutDamage(lastLifeValue);
+            StartCoroutine(TimeWithoutDamage(lastLifeValue));
         if (actualLife < maxLife && timeWithoutDamage)
         {
             actualLife += 5f * Time.deltaTime;
@@ -199,7 +204,7 @@ public class Player_Stats : MonoBehaviour
     private IEnumerator UpdateLife()
     {
         yield return new WaitForSeconds(1f);
-        Debug.Log("Corrutina 2");
+        // Debug.Log("Corrutina 2");
         lastLifeValue = actualLife; // Tuve que hacer 2 corrutinas porque sino al mezclar los distintos metodos de perdida y recuperacion, me tiraba errores.
                                     // Tal vez haya una solucion mas optima que esta
     }
@@ -208,8 +213,9 @@ public class Player_Stats : MonoBehaviour
 
     private void Muerto()
     {
-        // Animacion de muerte
         Debug.Log("Moriste... Fin.");
-        Destroy(this.gameObject);
+        dead = true;
+        //this.gameObject.SetActive(false);
+        //Destroy(this.gameObject);
     }
 }

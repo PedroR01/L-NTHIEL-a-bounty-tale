@@ -10,13 +10,12 @@ public class Interactable : MonoBehaviour
 
     protected virtual void Interact()
     {
-        Debug.Log("You can pick this item: " + this.name);
     }
 
     private void Update()
     {
         float distance = Vector3.Distance(player.position, interactionTransform.position);
-        if (distance <= radius && !canInteract)
+        if (distance <= radius)
         {
             Interact();
             canInteract = true;
@@ -27,7 +26,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected() // Cambiar esto por un trigger collider.
+    protected virtual void OnDrawGizmosSelected() // Cambiar esto por un trigger collider.
     {
         if (interactionTransform == null)
             interactionTransform = transform;

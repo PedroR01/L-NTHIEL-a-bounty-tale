@@ -43,9 +43,5 @@ public class Player_Starting_Cinematic : MonoBehaviour
     private void Movement()
     {
         transform.Translate(Vector3.forward * Time.deltaTime, Space.World);
-        if (transform.position.z >= 8f)
-        {
-            SceneManager.LoadScene("Dungeon_Level1");
-        }
     }
 }

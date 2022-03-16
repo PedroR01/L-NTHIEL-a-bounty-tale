@@ -5,7 +5,7 @@ public class Scriptable_Item : ScriptableObject
 {
     public new string name;
     public Sprite icon = null;
-    //public bool isDefaultItem = false;
+    public bool isKey = false;
 
     public virtual void Use()
     {

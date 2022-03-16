@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
 
 public class Inventory : MonoBehaviour
 {
@@ -48,5 +49,15 @@ public class Inventory : MonoBehaviour
     {
         items.Remove(item);
         itemChangedHandler?.Invoke();
+    }
+
+    public bool CheckInventoryFor(string itemName)
+    {
+        Scriptable_Item itemFound = items.Where(item => item.name == itemName).FirstOrDefault();
+
+        if (itemFound != null)
+            return true;
+        else
+            return false;
     }
 }

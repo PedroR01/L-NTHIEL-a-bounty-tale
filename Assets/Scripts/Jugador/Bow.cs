@@ -64,6 +64,7 @@ public class Bow : MonoBehaviour
     {
         if (isReloading || currentArrow == null || munition == 0) return; // Ver estos condicionales en caso de que no funcione
         var force = releasePoint.TransformDirection(Vector3.forward * firePower);
+        //Arrow theArrow = currentArrow.GetComponent<Arrow>();
         currentArrow.Fly(force);
         munition--;
         //currentArrow = null;

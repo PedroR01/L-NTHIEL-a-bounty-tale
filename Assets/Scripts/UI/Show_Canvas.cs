@@ -6,6 +6,12 @@ public class Show_Canvas : MonoBehaviour
 {
     [SerializeField] private Player_Stats stats_Timer;
 
+    private void Awake()
+    {
+        if (this != null)
+            DontDestroyOnLoad(this);
+    }
+
     private void Update()
     {
         if (stats_Timer.timeWithoutDamage) // Fijarse de añadir un booleano para que una vez que este suscripto no se vuelva a suscribir

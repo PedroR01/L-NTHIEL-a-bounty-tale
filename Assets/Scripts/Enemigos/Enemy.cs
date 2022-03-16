@@ -48,7 +48,7 @@ public abstract class Enemy : MonoBehaviour
         this.gameObject.name = data.name;
     }
 
-    protected bool CanAttack() // Tiempo entre tiros o golpes
+    public bool CanAttack() // Tiempo entre tiros o golpes
     {
         // Debug.Log("Tiempo: " + attackTimer);
         attackTimer -= Time.deltaTime;
@@ -131,8 +131,8 @@ public abstract class Enemy : MonoBehaviour
 
         if (objAngle <= fieldOfView)
         {
-            if (Physics.Raycast(transform.position, DirectionToObjective(), out hit, rayMaxDistance, obstacleLayer)) // Cambiar el tf por transform y borrar esa variable innecesaria.
-                return;
+            /*if (Physics.Raycast(transform.position, DirectionToObjective(), out hit, rayMaxDistance, obstacleLayer)) // Cambiar el tf por transform y borrar esa variable innecesaria.
+                return;*/
             if (Physics.Raycast(transform.position, DirectionToObjective(), out hit, rayMaxDistance, targetLayer))
             {
                 patrol = false;
