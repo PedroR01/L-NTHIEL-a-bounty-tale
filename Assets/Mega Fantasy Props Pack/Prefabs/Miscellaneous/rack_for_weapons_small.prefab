@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 499504}
   - component: {fileID: 3367126}
   - component: {fileID: 2314608}
-  - component: {fileID: 6446720}
+  - component: {fileID: 4818266370211919901}
   m_Layer: 0
   m_Name: rack_for_weapons_small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &499504
 Transform:
@@ -83,8 +83,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6446720
-MeshCollider:
+--- !u!65 &4818266370211919901
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,7 +93,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: dace15093a49b0940902cd768cd3b541, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.4815226, y: 1.983524, z: 0.6432815}
+  m_Center: {x: 0.74284494, y: 0.9917614, z: -0.0000009899418}

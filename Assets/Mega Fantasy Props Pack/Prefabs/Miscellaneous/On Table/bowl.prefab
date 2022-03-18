@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 447956}
   - component: {fileID: 3327260}
   - component: {fileID: 2328452}
-  - component: {fileID: 6475372}
+  - component: {fileID: 866020116000372598}
   m_Layer: 0
   m_Name: bowl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &447956
 Transform:
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6475372
-MeshCollider:
+--- !u!65 &866020116000372598
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +92,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: a9d27543a9545784183475959ace4682, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.7720299, y: 0.30513403, z: 0.77202976}
+  m_Center: {x: -0.000000004546849, y: 0.15256625, z: 0.000000009093698}

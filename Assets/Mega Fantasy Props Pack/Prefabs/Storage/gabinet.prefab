@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 418032}
   - component: {fileID: 3303656}
   - component: {fileID: 2310246}
-  - component: {fileID: 6423920}
+  - component: {fileID: 1383296391259118593}
   m_Layer: 0
   m_Name: gabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &418032
 Transform:
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6423920
-MeshCollider:
+--- !u!65 &1383296391259118593
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +92,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 30da44ad1861f384786bdca20bb4f493, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.5977983, y: 3.4670427, z: 0.63137263}
+  m_Center: {x: 0.0000017643198, y: 1.7344806, z: 0.26821595}

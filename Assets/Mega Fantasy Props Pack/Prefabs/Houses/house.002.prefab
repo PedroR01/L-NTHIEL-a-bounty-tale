@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 468570}
   - component: {fileID: 3305572}
   - component: {fileID: 2333838}
-  - component: {fileID: 6470432}
+  - component: {fileID: 8358346251863311776}
   m_Layer: 0
   m_Name: wood_wall.007 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &468570
 Transform:
@@ -83,8 +83,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6470432
-MeshCollider:
+--- !u!65 &8358346251863311776
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,10 +93,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 7ec77cb11305cae47b803cf734a41e70, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.1461744, y: 4.132397, z: 0.4280079}
+  m_Center: {x: -0.014285088, y: 1.9411986, z: 0.015234351}
 --- !u!1 &108144
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,13 +107,13 @@ GameObject:
   - component: {fileID: 474668}
   - component: {fileID: 3368504}
   - component: {fileID: 2370112}
-  - component: {fileID: 6421824}
+  - component: {fileID: 5508039926287068106}
   m_Layer: 0
   m_Name: wood_column.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &474668
 Transform:
@@ -179,8 +178,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6421824
-MeshCollider:
+--- !u!65 &5508039926287068106
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -189,10 +188,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 7c165e7cf498f6d4e99a872c0ca6510b, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.4206966, y: 3.6, z: 0.42069653}
+  m_Center: {x: 0.0000076293945, y: 1.7705841, z: -0.0000004768307}
 --- !u!1 &108646
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,13 +202,13 @@ GameObject:
   - component: {fileID: 451950}
   - component: {fileID: 3393462}
   - component: {fileID: 2384698}
-  - component: {fileID: 6402034}
+  - component: {fileID: 7449180838113093020}
   m_Layer: 0
   m_Name: wood_wall.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &451950
 Transform:
@@ -276,8 +274,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6402034
-MeshCollider:
+--- !u!65 &7449180838113093020
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -286,10 +284,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 1af03aa8c17dada4bac6e9946648dae7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.104191, y: 4, z: 0.4502216}
+  m_Center: {x: -0.014277458, y: 1.875, z: 0.0041122437}
 --- !u!1 &109986
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,13 +298,13 @@ GameObject:
   - component: {fileID: 423454}
   - component: {fileID: 3354902}
   - component: {fileID: 2303438}
-  - component: {fileID: 6420102}
+  - component: {fileID: 2875143011819531190}
   m_Layer: 0
   m_Name: wood_wall_enter.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &423454
 Transform:
@@ -373,8 +370,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6420102
-MeshCollider:
+--- !u!65 &2875143011819531190
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -383,10 +380,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: d3aedc0c316425f4da97c6058168cb16, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 12.154181, y: 4, z: 0.4502216}
+  m_Center: {x: 2.985715, y: 1.875, z: 0.004096985}
 --- !u!1 &110824
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,13 +394,13 @@ GameObject:
   - component: {fileID: 412576}
   - component: {fileID: 3398210}
   - component: {fileID: 2338286}
-  - component: {fileID: 6489110}
+  - component: {fileID: 2812621429201584517}
   m_Layer: 0
   m_Name: wood_wall.007 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &412576
 Transform:
@@ -470,8 +466,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6489110
-MeshCollider:
+--- !u!65 &2812621429201584517
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -480,10 +476,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 7ec77cb11305cae47b803cf734a41e70, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.1461744, y: 4.132397, z: 0.4280079}
+  m_Center: {x: -0.014285088, y: 1.9411986, z: 0.01524961}
 --- !u!1 &115266
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,13 +490,13 @@ GameObject:
   - component: {fileID: 481342}
   - component: {fileID: 3399256}
   - component: {fileID: 2358890}
-  - component: {fileID: 6463266}
+  - component: {fileID: 7326716025113880891}
   m_Layer: 0
   m_Name: wood_wall.018 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &481342
 Transform:
@@ -567,8 +562,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6463266
-MeshCollider:
+--- !u!65 &7326716025113880891
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -577,10 +572,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 32955392b5f22614a8ab4aab9442b8cd, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.086504, y: 4, z: 0.45022166}
+  m_Center: {x: -0.014315726, y: 1.875, z: 0.004112244}
 --- !u!1 &116716
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,13 +586,13 @@ GameObject:
   - component: {fileID: 411436}
   - component: {fileID: 3321316}
   - component: {fileID: 2305212}
-  - component: {fileID: 6447658}
+  - component: {fileID: 7735951814857922999}
   m_Layer: 0
   m_Name: wood_wall.007 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &411436
 Transform:
@@ -664,8 +658,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6447658
-MeshCollider:
+--- !u!65 &7735951814857922999
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -674,10 +668,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 7ec77cb11305cae47b803cf734a41e70, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.1461744, y: 4.132397, z: 0.4280079}
+  m_Center: {x: -0.014277458, y: 1.9411986, z: 0.015219092}
 --- !u!1 &119752
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,13 +682,13 @@ GameObject:
   - component: {fileID: 451128}
   - component: {fileID: 3399488}
   - component: {fileID: 2374720}
-  - component: {fileID: 6427470}
+  - component: {fileID: 6664869252157216550}
   m_Layer: 0
   m_Name: wood_wall.017 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &451128
 Transform:
@@ -761,8 +754,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6427470
-MeshCollider:
+--- !u!65 &6664869252157216550
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -771,10 +764,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 1af03aa8c17dada4bac6e9946648dae7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.104191, y: 4, z: 0.4502216}
+  m_Center: {x: -0.014285088, y: 1.875, z: 0.004081726}
 --- !u!1 &120446
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,13 +778,13 @@ GameObject:
   - component: {fileID: 487096}
   - component: {fileID: 3318986}
   - component: {fileID: 2343508}
-  - component: {fileID: 6492038}
+  - component: {fileID: 8445900758861505703}
   m_Layer: 0
   m_Name: wood_wall.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &487096
 Transform:
@@ -858,8 +850,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6492038
-MeshCollider:
+--- !u!65 &8445900758861505703
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -868,10 +860,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 32955392b5f22614a8ab4aab9442b8cd, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.086504, y: 4, z: 0.45022166}
+  m_Center: {x: -0.014300467, y: 1.875, z: 0.004112244}
 --- !u!1 &135412
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,13 +874,13 @@ GameObject:
   - component: {fileID: 466076}
   - component: {fileID: 3367930}
   - component: {fileID: 2346514}
-  - component: {fileID: 6468924}
+  - component: {fileID: 8831523692076216401}
   m_Layer: 0
   m_Name: platform.004 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &466076
 Transform:
@@ -955,8 +946,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6468924
-MeshCollider:
+--- !u!65 &8831523692076216401
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -965,10 +956,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 26424d34dab6a804ea49c995402b01da, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.104191, y: 0.3130069, z: 4}
+  m_Center: {x: -0.014292719, y: -0.06296109, z: 1.9999924}
 --- !u!1 &147888
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,13 +970,13 @@ GameObject:
   - component: {fileID: 453498}
   - component: {fileID: 3338550}
   - component: {fileID: 2390466}
-  - component: {fileID: 6484660}
+  - component: {fileID: 9214519985258214383}
   m_Layer: 0
   m_Name: wood_column.003 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &453498
 Transform:
@@ -1051,8 +1041,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6484660
-MeshCollider:
+--- !u!65 &9214519985258214383
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1061,10 +1051,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 7c165e7cf498f6d4e99a872c0ca6510b, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.4206966, y: 3.6000001, z: 0.42069653}
+  m_Center: {x: 0.0000076293945, y: 1.7705728, z: -5.475134e-11}
 --- !u!1 &150876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,13 +1065,13 @@ GameObject:
   - component: {fileID: 408788}
   - component: {fileID: 3320482}
   - component: {fileID: 2399596}
-  - component: {fileID: 6497802}
+  - component: {fileID: 3616411416070781478}
   m_Layer: 0
   m_Name: wood_wall.018 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &408788
 Transform:
@@ -1148,8 +1137,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6497802
-MeshCollider:
+--- !u!65 &3616411416070781478
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1158,10 +1147,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 32955392b5f22614a8ab4aab9442b8cd, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.086504, y: 4, z: 0.45022166}
+  m_Center: {x: -0.014315726, y: 1.875, z: 0.004112244}
 --- !u!1 &159638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,13 +1161,13 @@ GameObject:
   - component: {fileID: 460584}
   - component: {fileID: 3363080}
   - component: {fileID: 2345520}
-  - component: {fileID: 6408656}
+  - component: {fileID: 3795455227037119962}
   m_Layer: 0
   m_Name: platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &460584
 Transform:
@@ -1245,8 +1233,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6408656
-MeshCollider:
+--- !u!65 &3795455227037119962
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1255,10 +1243,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: a3df8d195cffbc14baca97db6d48a84a, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.104191, y: 0.31300655, z: 4}
+  m_Center: {x: -0.014277458, y: -0.06295346, z: 2.0000076}
 --- !u!1 &159650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,13 +1257,13 @@ GameObject:
   - component: {fileID: 453478}
   - component: {fileID: 3363354}
   - component: {fileID: 2305630}
-  - component: {fileID: 6414980}
+  - component: {fileID: 4242193723430060854}
   m_Layer: 0
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &453478
 Transform:
@@ -1342,8 +1329,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6414980
-MeshCollider:
+--- !u!65 &4242193723430060854
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1352,10 +1339,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: a3df8d195cffbc14baca97db6d48a84a, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.104191, y: 0.31300655, z: 3.9999998}
+  m_Center: {x: -0.014277399, y: -0.06295346, z: 1.9999999}
 --- !u!1 &160752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,13 +1353,13 @@ GameObject:
   - component: {fileID: 485880}
   - component: {fileID: 3313766}
   - component: {fileID: 2304488}
-  - component: {fileID: 6462624}
+  - component: {fileID: 1114689737940412355}
   m_Layer: 0
   m_Name: platform.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &485880
 Transform:
@@ -1439,8 +1425,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6462624
-MeshCollider:
+--- !u!65 &1114689737940412355
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1449,10 +1435,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 26424d34dab6a804ea49c995402b01da, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.104191, y: 0.31300652, z: 4}
+  m_Center: {x: -0.01427752, y: -0.06295345, z: 2}
 --- !u!1 &169494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,13 +1449,13 @@ GameObject:
   - component: {fileID: 457982}
   - component: {fileID: 3302972}
   - component: {fileID: 2346868}
-  - component: {fileID: 6432188}
+  - component: {fileID: 959736644597166871}
   m_Layer: 0
   m_Name: wood_wall.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &457982
 Transform:
@@ -1536,8 +1521,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6432188
-MeshCollider:
+--- !u!65 &959736644597166871
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1546,10 +1531,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 7ec77cb11305cae47b803cf734a41e70, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.1461744, y: 4.132397, z: 0.4280079}
+  m_Center: {x: -0.014285088, y: 1.9411986, z: 0.015219092}
 --- !u!1 &173652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,7 +1548,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &490560
 Transform:
@@ -1619,7 +1603,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &458712
 Transform:
@@ -1709,13 +1693,13 @@ GameObject:
   - component: {fileID: 494092}
   - component: {fileID: 3368730}
   - component: {fileID: 2378498}
-  - component: {fileID: 6450110}
+  - component: {fileID: 7503642098989275716}
   m_Layer: 0
   m_Name: wood_wall.000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &494092
 Transform:
@@ -1781,8 +1765,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6450110
-MeshCollider:
+--- !u!65 &7503642098989275716
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1791,10 +1775,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 63d855eae5ef67342b5e1dee00fa21e2, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 12.104193, y: 4, z: 0.45022166}
+  m_Center: {x: 2.9857152, y: 1.875, z: 0.004112244}
 --- !u!1 &179718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,13 +1789,13 @@ GameObject:
   - component: {fileID: 497860}
   - component: {fileID: 3306814}
   - component: {fileID: 2311586}
-  - component: {fileID: 6435864}
+  - component: {fileID: 6689577652770383515}
   m_Layer: 0
   m_Name: wood_column.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &497860
 Transform:
@@ -1877,8 +1860,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6435864
-MeshCollider:
+--- !u!65 &6689577652770383515
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1887,10 +1870,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: d3bf45d0cd692a049b20f3c921bdabdf, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.7011609, y: 8.963615, z: 3.599492}
+  m_Center: {x: 0.000030517578, y: 4.433072, z: 1.4491808}
 --- !u!1 &185550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,13 +1884,13 @@ GameObject:
   - component: {fileID: 433282}
   - component: {fileID: 3352990}
   - component: {fileID: 2381746}
-  - component: {fileID: 6481170}
+  - component: {fileID: 2068163824223507082}
   m_Layer: 0
   m_Name: platform.004 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &433282
 Transform:
@@ -1974,8 +1956,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6481170
-MeshCollider:
+--- !u!65 &2068163824223507082
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1984,10 +1966,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 26424d34dab6a804ea49c995402b01da, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.104191, y: 0.3130069, z: 4}
+  m_Center: {x: -0.014292719, y: -0.06295727, z: 1.9999847}
 --- !u!1 &193396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,13 +1980,13 @@ GameObject:
   - component: {fileID: 409158}
   - component: {fileID: 3380372}
   - component: {fileID: 2305750}
-  - component: {fileID: 6493206}
+  - component: {fileID: 2982315512310005454}
   m_Layer: 0
   m_Name: platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &409158
 Transform:
@@ -2071,8 +2052,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6493206
-MeshCollider:
+--- !u!65 &2982315512310005454
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2081,10 +2062,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: a3df8d195cffbc14baca97db6d48a84a, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.104191, y: 0.31300655, z: 3.9999998}
+  m_Center: {x: -0.014277399, y: -0.06295346, z: 2.0000076}
 --- !u!1 &196728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,13 +2076,13 @@ GameObject:
   - component: {fileID: 461618}
   - component: {fileID: 3352934}
   - component: {fileID: 2316576}
-  - component: {fileID: 6427408}
+  - component: {fileID: 5450350525465405144}
   m_Layer: 0
   m_Name: platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &461618
 Transform:
@@ -2168,8 +2148,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6427408
-MeshCollider:
+--- !u!65 &5450350525465405144
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2178,7 +2158,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: a3df8d195cffbc14baca97db6d48a84a, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.104192, y: 0.31300655, z: 4.0000005}
+  m_Center: {x: -0.014292778, y: -0.06295344, z: 2.0000002}

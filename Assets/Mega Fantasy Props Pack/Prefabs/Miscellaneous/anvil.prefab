@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 431594}
   - component: {fileID: 3314068}
   - component: {fileID: 2321322}
-  - component: {fileID: 6477166}
+  - component: {fileID: 1842881165836665747}
   m_Layer: 0
   m_Name: anvil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &431594
 Transform:
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6477166
-MeshCollider:
+--- !u!65 &1842881165836665747
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +92,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 051e3ba88d85e954684e39b4f0a90985, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.743159, y: 1.0146463, z: 0.81149834}
+  m_Center: {x: -0.009507508, y: 0.5090971, z: 0}

@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu/Main Menu.unity
     guid: e5c5886964b5a384fad8a9a450185a96
   - enabled: 1
-    path: Assets/Scenes/Levels/Dungeon_Level1.unity
+    path: Assets/Scenes/Levels/Dungeon_Level1/Dungeon_Level1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Levels/Village_Level2.unity
+    path: Assets/Scenes/Levels/Village_Level2/Village_Level2.unity
     guid: 2c09c751e38baa0438abcb25c330c91d
   m_configObjects: {}

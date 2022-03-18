@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 467058}
   - component: {fileID: 3320942}
   - component: {fileID: 2383698}
-  - component: {fileID: 6408606}
+  - component: {fileID: 201282579}
   m_Layer: 0
   m_Name: wood_wall.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &467058
 Transform:
@@ -83,8 +83,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6408606
-MeshCollider:
+--- !u!65 &201282579
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,7 +93,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: bd97669d51f5a43498ab4ea2cdbf72df, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 6.1200013, y: 4, z: 0.22244185}
+  m_Center: {x: -0.014290813, y: 1.875, z: 0.0020317477}

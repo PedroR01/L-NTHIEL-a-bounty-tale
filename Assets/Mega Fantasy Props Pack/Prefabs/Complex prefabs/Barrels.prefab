@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 458632}
   - component: {fileID: 3310998}
   - component: {fileID: 2373386}
-  - component: {fileID: 6456224}
+  - component: {fileID: 1937601945561275849}
   m_Layer: 0
   m_Name: barrel.003 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &458632
 Transform:
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6456224
-MeshCollider:
+--- !u!65 &1937601945561275849
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,10 +94,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2797a1e5240980a41a5c432cb694063d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.1430827, y: 1.3440006, z: 1.1430827}
+  m_Center: {x: -0.000000020027162, y: 0.67199993, z: 0.000001947403}
 --- !u!1 &121582
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,13 +108,13 @@ GameObject:
   - component: {fileID: 428484}
   - component: {fileID: 3304382}
   - component: {fileID: 2308938}
-  - component: {fileID: 6471032}
+  - component: {fileID: 5549309741556674832}
   m_Layer: 0
   m_Name: barrel.003 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &428484
 Transform:
@@ -182,8 +181,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6471032
-MeshCollider:
+--- !u!65 &5549309741556674832
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -192,10 +191,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2797a1e5240980a41a5c432cb694063d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.1430827, y: 1.3440006, z: 1.1430827}
+  m_Center: {x: -0.000000020027162, y: 0.6719989, z: 0.000000040054324}
 --- !u!1 &141718
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,13 +242,13 @@ GameObject:
   - component: {fileID: 472052}
   - component: {fileID: 3321934}
   - component: {fileID: 2396412}
-  - component: {fileID: 6477424}
+  - component: {fileID: 8933453696938476028}
   m_Layer: 0
   m_Name: barrel.003 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &472052
 Transform:
@@ -317,8 +315,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6477424
-MeshCollider:
+--- !u!65 &8933453696938476028
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -327,10 +325,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2797a1e5240980a41a5c432cb694063d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.1430827, y: 1.3440006, z: 1.1430827}
+  m_Center: {x: -0.000000020027162, y: 0.6719999, z: 0.000000040054324}
 --- !u!1 &167790
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,13 +339,13 @@ GameObject:
   - component: {fileID: 458086}
   - component: {fileID: 3392800}
   - component: {fileID: 2302062}
-  - component: {fileID: 6403810}
+  - component: {fileID: 765213218161103120}
   m_Layer: 0
   m_Name: barrel.003 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &458086
 Transform:
@@ -415,8 +412,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6403810
-MeshCollider:
+--- !u!65 &765213218161103120
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -425,10 +422,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2797a1e5240980a41a5c432cb694063d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.1430827, y: 1.3439999, z: 1.1430829}
+  m_Center: {x: -0.000000020027189, y: 0.67199796, z: -0.0000017189979}
 --- !u!1 &167822
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,13 +436,13 @@ GameObject:
   - component: {fileID: 449920}
   - component: {fileID: 3366946}
   - component: {fileID: 2374192}
-  - component: {fileID: 6494726}
+  - component: {fileID: 2157805172421747324}
   m_Layer: 0
   m_Name: barrel.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &449920
 Transform:
@@ -513,8 +509,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6494726
-MeshCollider:
+--- !u!65 &2157805172421747324
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -523,10 +519,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2797a1e5240980a41a5c432cb694063d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.1430827, y: 1.3440006, z: 1.1430827}
+  m_Center: {x: 0.0000018873214, y: 0.6719989, z: 0.0000009937287}
 --- !u!1 &167930
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,13 +533,13 @@ GameObject:
   - component: {fileID: 430078}
   - component: {fileID: 3369896}
   - component: {fileID: 2355730}
-  - component: {fileID: 6416356}
+  - component: {fileID: 2946657473798245238}
   m_Layer: 0
   m_Name: barrel.003 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &430078
 Transform:
@@ -611,8 +606,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6416356
-MeshCollider:
+--- !u!65 &2946657473798245238
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -621,10 +616,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2797a1e5240980a41a5c432cb694063d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.1430827, y: 1.3440006, z: 1.1430827}
+  m_Center: {x: -0.000000020027162, y: 0.671999, z: 0.000000040054324}
 --- !u!1 &168136
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,13 +630,13 @@ GameObject:
   - component: {fileID: 457006}
   - component: {fileID: 3372884}
   - component: {fileID: 2310994}
-  - component: {fileID: 6456426}
+  - component: {fileID: 1944457758417021892}
   m_Layer: 0
   m_Name: barrel.003 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &457006
 Transform:
@@ -709,8 +703,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6456426
-MeshCollider:
+--- !u!65 &1944457758417021892
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -719,7 +713,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2797a1e5240980a41a5c432cb694063d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.1430827, y: 1.3439999, z: 1.1430829}
+  m_Center: {x: 0.0000018873214, y: 0.671997, z: -0.0000018382071}

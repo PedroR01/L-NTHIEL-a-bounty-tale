@@ -10,9 +10,6 @@ public class Aiming_Camera : MonoBehaviour
     [SerializeField] private GameObject aimReticle;
 
     //Cinemachine.CinemachineImpulseSource source;
-    private void Start()
-    {
-    }
 
     private void Update()
     {

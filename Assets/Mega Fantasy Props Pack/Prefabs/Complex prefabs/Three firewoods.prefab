@@ -23,9 +23,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107796}
-  m_LocalRotation: {x: 0.7913131, y: 0.5587091, z: 0.20211366, w: 0.14428383}
+  m_LocalRotation: {x: 0.7913131, y: 0.558709, z: 0.20211361, w: 0.14428438}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7310051, y: 0.731005, z: 0.7310051}
+  m_LocalScale: {x: 0.731005, y: 0.7310051, z: 0.7310051}
   m_Children:
   - {fileID: 464614}
   - {fileID: 429360}
@@ -44,13 +44,13 @@ GameObject:
   - component: {fileID: 464614}
   - component: {fileID: 3385946}
   - component: {fileID: 2399634}
-  - component: {fileID: 6467702}
+  - component: {fileID: 1429675427551858277}
   m_Layer: 0
   m_Name: firewood_single
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &464614
 Transform:
@@ -116,8 +116,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6467702
-MeshCollider:
+--- !u!65 &1429675427551858277
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -126,10 +126,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 70e95b1800ece4e4dbc6e3b7bec606ad, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.45181474, y: 0.45131713, z: 2.0467813}
+  m_Center: {x: -0.22548808, y: 0.22565524, z: 0.0000019865115}
 --- !u!1 &127020
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,13 +140,13 @@ GameObject:
   - component: {fileID: 429360}
   - component: {fileID: 3350402}
   - component: {fileID: 2355298}
-  - component: {fileID: 6458828}
+  - component: {fileID: 6129924282307681588}
   m_Layer: 0
   m_Name: firewood_single (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &429360
 Transform:
@@ -213,8 +212,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6458828
-MeshCollider:
+--- !u!65 &6129924282307681588
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -223,10 +222,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 70e95b1800ece4e4dbc6e3b7bec606ad, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.45181504, y: 0.45131722, z: 2.046781}
+  m_Center: {x: -0.22549199, y: 0.22565608, z: 0.0000019669508}
 --- !u!1 &144464
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,13 +236,13 @@ GameObject:
   - component: {fileID: 401762}
   - component: {fileID: 3380344}
   - component: {fileID: 2395220}
-  - component: {fileID: 6470470}
+  - component: {fileID: 1752313375903065266}
   m_Layer: 0
   m_Name: firewood_single (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &401762
 Transform:
@@ -310,8 +308,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6470470
-MeshCollider:
+--- !u!65 &1752313375903065266
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -320,7 +318,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 70e95b1800ece4e4dbc6e3b7bec606ad, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.45181504, y: 0.45131674, z: 2.0467813}
+  m_Center: {x: -0.22549391, y: 0.22565924, z: 0.00000005622968}

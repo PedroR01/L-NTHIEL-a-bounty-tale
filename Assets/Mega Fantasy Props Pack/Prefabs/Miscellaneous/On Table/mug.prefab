@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 423048}
   - component: {fileID: 3378016}
   - component: {fileID: 2340740}
-  - component: {fileID: 6416222}
+  - component: {fileID: 7085124074843785215}
   m_Layer: 0
   m_Name: mug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &423048
 Transform:
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6416222
-MeshCollider:
+--- !u!65 &7085124074843785215
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,7 +92,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 37d17dfa176850c45a85a208ca314b33, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.18715502, y: 0.17779052, z: 0.13718483}
+  m_Center: {x: -0.02498509, y: 0.08889526, z: -0.0000000037252903}

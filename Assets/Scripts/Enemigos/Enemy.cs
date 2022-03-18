@@ -131,13 +131,18 @@ public abstract class Enemy : MonoBehaviour
 
         if (objAngle <= fieldOfView)
         {
-            /*if (Physics.Raycast(transform.position, DirectionToObjective(), out hit, rayMaxDistance, obstacleLayer)) // Cambiar el tf por transform y borrar esa variable innecesaria.
+            /*if (Physics.Raycast(transform.position, DirectionToObjective(), out hit, rayMaxDistance, obstacleLayer)) // El error aca era porque el rayo ignora a todos los layers excepto el del obstaculo y impactaba en un uno
                 return;*/
-            if (Physics.Raycast(transform.position, DirectionToObjective(), out hit, rayMaxDistance, targetLayer))
+            if (Physics.Raycast(transform.position, DirectionToObjective(), out hit, rayMaxDistance))
             {
-                patrol = false;
-                if (!attack)
-                    chase = true;
+                if (hit.collider.tag == "Player")
+                {
+                    patrol = false;
+                    if (!attack)
+                        chase = true;
+                }
+                else if (hit.collider.tag == "Obstacle")
+                    patrol = true;
             }
         }
     } // Despues ver de tanto el raycast como el fov ponerlos en un script aparte

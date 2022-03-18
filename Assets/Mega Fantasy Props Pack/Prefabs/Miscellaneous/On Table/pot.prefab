@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 483570}
   - component: {fileID: 3384082}
   - component: {fileID: 2392672}
-  - component: {fileID: 6419376}
+  - component: {fileID: 256439219327206369}
   m_Layer: 0
   m_Name: pot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &483570
 Transform:
@@ -83,8 +83,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6419376
-MeshCollider:
+--- !u!65 &256439219327206369
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,7 +93,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: fa2482d7133229c46b6a0f174825312d, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.59706485, y: 0.23039053, z: 0.3336049}
+  m_Center: {x: -0.13173182, y: 0.11633204, z: 0.0000000056734035}

@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 437826}
   - component: {fileID: 3350266}
   - component: {fileID: 2310128}
-  - component: {fileID: 6407576}
+  - component: {fileID: 4575401447479403164}
   m_Layer: 0
   m_Name: bed.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &437826
 Transform:
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6407576
-MeshCollider:
+--- !u!65 &4575401447479403164
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +94,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 556b7e13935e0184c942d8854e5bf845, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.0864015, y: 1.1474715, z: 3.6224744}
+  m_Center: {x: 0.3576471, y: 0.5737345, z: 1.0251894}

@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 483690}
   - component: {fileID: 3368930}
   - component: {fileID: 2362080}
-  - component: {fileID: 6439128}
+  - component: {fileID: 5781554445634778823}
   m_Layer: 0
   m_Name: books.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &483690
 Transform:
@@ -86,8 +86,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6439128
-MeshCollider:
+--- !u!65 &5781554445634778823
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,7 +96,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: afbdb5a59fa2e4c46af77ffebddc21b2, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.5512455, y: 0.5865834, z: 0.42824203}
+  m_Center: {x: 0.030211728, y: 0.29344016, z: 0.035684407}

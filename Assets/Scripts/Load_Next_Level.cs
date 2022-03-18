@@ -23,4 +23,10 @@ public class Load_Next_Level : MonoBehaviour
         if (other.gameObject.layer == 10 && actualScene.name == "Village_Level2")
             SceneManager.LoadScene("Castle_Level3");
     }
+
+    public void OnQuit()
+    {
+        Debug.Log("Aplication Closed");
+        Application.Quit();
+    }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5200681163901301247}
   - component: {fileID: 5200681163899974111}
   - component: {fileID: 5200681163899007775}
+  - component: {fileID: 1197222603193069165}
   m_Layer: 0
   m_Name: Bag
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5200681163900939743}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 5.9840336, y: 0, z: 7.8795195}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100.00004, z: 100.00004}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1197222603193069165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5200681163900939743}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0041248403, y: 0.006465012, z: 0.0077552097}
+  m_Center: {x: 0, y: 0.00006138069, z: 0.0038760798}

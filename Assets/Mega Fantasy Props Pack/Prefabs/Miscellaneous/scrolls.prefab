@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 460100}
   - component: {fileID: 3343470}
   - component: {fileID: 2305984}
-  - component: {fileID: 6491384}
+  - component: {fileID: 9035277275286705102}
   m_Layer: 0
   m_Name: scrolls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &460100
 Transform:
@@ -83,8 +83,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6491384
-MeshCollider:
+--- !u!65 &9035277275286705102
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,7 +93,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 87eae56dfd6732740981e5602d04797f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.24699141, y: 0.20976493, z: 0.80226284}
+  m_Center: {x: -0.08641832, y: 0.11098635, z: -0.0011181764}
