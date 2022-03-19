@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Basic_Archer
   m_EditorClassIdentifier: 
   name: Archer
-  life: 90
+  life: 71
   armour: 4
   damage: 20
   speed: 5.5

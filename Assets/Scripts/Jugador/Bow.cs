@@ -17,62 +17,96 @@ public class Bow : MonoBehaviour
 
     [SerializeField] private Weapon_Controller munitionController;
 
+    private Arrow[] arrayArrow;
+    private int arrowIndex;
     private Arrow currentArrow;
     private bool isReloading;
 
+    private void Start()
+    {
+        arrayArrow = new Arrow[10];
+        for (int i = 0; i < arrayArrow.Length; i++)
+        {
+            arrayArrow[i] = Instantiate(arrowPrefab, spawnPoint);
+            arrayArrow[i].gameObject.SetActive(false);
+        }
+
+        arrowIndex = -1;
+    }
+
     public void Reload()
     {
-        if (isReloading && currentArrow != null || munition == 0) return; // Si hay algun bug con la aparicion de flechas, este condicional puede ser el problema.
+        if (isReloading && arrayArrow[arrowIndex] != null || munition == 0) return; // Si hay algun bug con la aparicion de flechas, este condicional puede ser el problema.
         isReloading = true;
         lastMunitionCheck = munition;
-        Debug.Log("arrowUsed == " + munitionController.arrowUsed);
-        if (munitionController.arrowUsed)
+
+        // currentArrow = arrayArrow[arrowIndex];
+
+        if (munitionController.arrowUsed || arrowIndex == -1)
         {
             StartCoroutine(ReloadAfterTime());
         }
-        else if (!munitionController.arrowUsed)
+        else if (munitionController.aiming)
         {
-            currentArrow.transform.SetParent(spawnPoint);
-            currentArrow.transform.localPosition = spawnPoint.transform.localPosition;
-            currentArrow.gameObject.SetActive(true);
+            arrayArrow[arrowIndex].gameObject.SetActive(true);
+            isReloading = false;
+        }
+        else if (!munitionController.aiming && !munitionController.arrowUsed)
+        {
+            CancelFire();
         }
     }
 
     private IEnumerator ReloadAfterTime()
     {
         yield return new WaitForSeconds(reloadTime);
-        currentArrow = Instantiate(arrowPrefab, spawnPoint);
-        currentArrow.transform.localPosition = Vector3.zero; // Ver donde poner esto si se spawnea mal la flecha
+        if (arrowIndex < arrayArrow.Length - 1)
+        {
+            arrowIndex++;
+            Debug.Log("flecha numero: " + arrowIndex);
+        }
+        else
+            arrowIndex = 0;
+
+        arrayArrow[arrowIndex].gameObject.SetActive(true);
+        arrayArrow[arrowIndex].transform.localPosition = Vector3.zero; // Ver donde poner esto si se spawnea mal la flecha
         isReloading = false;
     }
 
     public void ArrowInBow()
     {
-        currentArrow.transform.SetParent(releasePoint);
-        currentArrow.transform.localPosition = releasePoint.transform.localPosition - new Vector3(-0.2f, 1.9f, -1.2f);
-        currentArrow.transform.localEulerAngles = Vector3.zero;
+        arrayArrow[arrowIndex].transform.SetParent(releasePoint);
+        arrayArrow[arrowIndex].transform.localPosition = releasePoint.transform.localPosition - new Vector3(-0.2f, 1.9f, -1.2f);
+        arrayArrow[arrowIndex].transform.localEulerAngles = Vector3.zero;
     } // Cambia el posicionamiento de la flecha a la ubicacion del arco
 
     public void CancelFire()
     {
-        Debug.Log("La flecha " + currentArrow + "ha sido guardada");
-        currentArrow.gameObject.SetActive(false);
+        Debug.Log("La flecha " + arrayArrow[arrowIndex] + "ha sido guardada");
+        arrayArrow[arrowIndex].gameObject.SetActive(false);
         isReloading = false;
     }
 
     public void Fire(float firePower)
     {
-        if (isReloading || currentArrow == null || munition == 0) return; // Ver estos condicionales en caso de que no funcione
+        if (isReloading || arrayArrow[arrowIndex] == null || munition == 0) return; // Ver estos condicionales en caso de que no funcione
         var force = releasePoint.TransformDirection(Vector3.forward * firePower);
         //Arrow theArrow = currentArrow.GetComponent<Arrow>();
-        currentArrow.Fly(force);
+        arrayArrow[arrowIndex].Fly(force);
         munition--;
+
         //currentArrow = null;
         //Reload();
     }
 
     public bool IsReady()
     {
-        return (!isReloading && currentArrow != null && munition != 0);
+        return (!isReloading && arrayArrow[arrowIndex] != null && munition != 0);
+    }
+
+    public void DeleteArrow()
+    {
+        Debug.Log("Flecha borrada");
+        // arrayArrow[arrowIndex].gameObject.SetActive(false);
     }
 }

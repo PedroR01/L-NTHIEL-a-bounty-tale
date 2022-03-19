@@ -30,6 +30,7 @@ public abstract class Enemy : MonoBehaviour
     public bool patrol; // Ver si conviene cambiar los booleanos por un switch con los distintos estados
     public bool chase;
     public bool attack;
+    public bool dead = false;
 
     public enum TiposDeEnemigos
     {
@@ -65,11 +66,7 @@ public abstract class Enemy : MonoBehaviour
     public void DamageReceived(float damageAmount) // Ver si este como dead deberian ser abstract o dejarlos asi. Falta la animacion al ser golpeado
     {
         actualLife -= damageAmount - armour;
-
-        if (actualLife <= 0)
-        {
-            Dead();
-        }
+        Debug.Log("Enemy life: " + actualLife);
     }
 
     protected abstract void Dead();
@@ -81,21 +78,28 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void TheBehaviour()
     {
-        Raycast();
-        if (patrol)
+        if (actualLife <= 0)
         {
-            if (!patrolScript.isActiveAndEnabled)
-            {
-                ReturnToOriginPosition();
-                chase = false;
-                attack = false;
-            }
+            Dead();
         }
-        else if (chase && !attack)
+        else
         {
-            stand = false;
-            patrol = false;
-            Chase();
+            Raycast();
+            if (patrol)
+            {
+                if (!patrolScript.isActiveAndEnabled)
+                {
+                    ReturnToOriginPosition();
+                    chase = false;
+                    attack = false;
+                }
+            }
+            else if (chase && !attack)
+            {
+                stand = false;
+                patrol = false;
+                Chase();
+            }
         }
     }
 

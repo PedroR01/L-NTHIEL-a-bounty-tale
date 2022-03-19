@@ -64,6 +64,7 @@ public class Archer : Enemy
 
     protected override void Dead()
     {
+        dead = true;
         Destroy(this, 3);
     }
 }

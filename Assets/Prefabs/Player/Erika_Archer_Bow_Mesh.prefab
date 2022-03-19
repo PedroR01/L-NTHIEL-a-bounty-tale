@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4302659293862965877}
   - component: {fileID: 2352592483461227629}
-  - component: {fileID: 2305904596831222689}
+  - component: {fileID: 8916513071359377687}
   m_Layer: 10
   m_Name: Erika_Archer_Bow_Mesh
   m_TagString: Untagged
@@ -101,7 +101,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.48783338, y: -0.076814644, z: -0.0096770525}
     m_Extent: {x: 0.19930245, y: 0.12288717, z: 1.0208229}
   m_DirtyAABB: 0
---- !u!114 &2305904596831222689
+--- !u!114 &8916513071359377687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reloadTime: 0.3
-  arrowPrefab: {fileID: 7171382165114871042, guid: 6d8926c2c7a9407418f8e8aac200c0ed, type: 3}
+  arrowPrefab: {fileID: 9028787329428081055, guid: 6d8926c2c7a9407418f8e8aac200c0ed, type: 3}
   spawnPoint: {fileID: 0}
   releasePoint: {fileID: 4302659293862965877}
   munition: 5

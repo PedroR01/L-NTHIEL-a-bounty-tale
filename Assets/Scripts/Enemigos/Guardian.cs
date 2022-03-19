@@ -68,6 +68,7 @@ public class Guardian : Enemy
 
     protected override void Dead()
     {
+        dead = true;
         Destroy(this, 3);
     }
 }

@@ -20,14 +20,14 @@ public class Weapon_Controller : MonoBehaviour
     public float attackRangeM = 0.5f;
     private float damageM;
 
-    public bool arrowUsed;
-    private bool aiming;
+    [HideInInspector] public bool arrowUsed;
+    [HideInInspector] public bool aiming;
     private bool charging;
 
     private void Start()
     {
-        arrowUsed = true;
         damageM = 10f;
+        aiming = false;
         //bow.Reload();
     }
 
@@ -57,40 +57,63 @@ public class Weapon_Controller : MonoBehaviour
         mouseY = Mathf.Clamp(mouseY, minRotation, maxRotation);
         bow.transform.localRotation = Quaternion.Euler(mouseY, bow.transform.localEulerAngles.y, bow.transform.localEulerAngles.z);
 
-        if (Input.GetMouseButtonDown(1))
+        if (bow.munition == 0)
+            return;
+        else
         {
-            bow.Reload();
-            StartCoroutine(RepositioningArrow());
-        }
-        if (!charging && Input.GetMouseButtonUp(1))
-        {
-            arrowUsed = false;
-            bow.CancelFire();
-        }
+            if (Input.GetMouseButtonDown(1))
+            {
+                aiming = true;
+                arrowUsed = false;
+                bow.Reload();
+                StartCoroutine(RepositioningArrow());
+            }
 
-        if (Input.GetMouseButton(1) && Input.GetMouseButtonDown(0))
-            charging = true;
+            if (arrowUsed && Input.GetMouseButtonUp(1))
+            {
+                bow.DeleteArrow();
+                aiming = false;
+            }
+            else if (!charging && Input.GetMouseButtonUp(1))
+            {
+                arrowUsed = false;
+                aiming = false;
+                bow.Reload();
+            }
 
-        if (charging && firePower < maxFirePower)
-        {
-            firePower += Time.deltaTime * firePowerSpeed;
-        }
-        if (charging && Input.GetMouseButtonUp(0))
-        {
-            bow.Fire(firePower); // Esto deberia ir en un FixedUpdate?
-            firePower = 0;
-            arrowUsed = true;
-            charging = false;
-        }
+            if (Input.GetMouseButton(1) && Input.GetMouseButtonDown(0))
+            {
+                charging = true;
+            }
+            else if (!charging && aiming && arrowUsed && Input.GetMouseButton(1))
+            {
+                bow.Reload();
+                StartCoroutine(RepositioningArrow());
+                aiming = true;
+                arrowUsed = false;
+            }
 
-        if (charging)
-        {
-            firePowerSlider.value = firePower;
-            //firePowerSlider.value = 1;
+            if (charging && firePower < maxFirePower) // Esto podria ir como un else if por debajo de el if de la linea 80
+            {
+                firePower += Time.deltaTime * firePowerSpeed;
+            }
+            if (charging && Input.GetMouseButtonUp(0))
+            {
+                bow.Fire(firePower); // Esto deberia ir en un FixedUpdate?
+                firePower = 0;
+                arrowUsed = true;
+                charging = false;
+            }
+
+            if (charging)
+            {
+                firePowerSlider.value = firePower;
+                //firePowerSlider.value = 1;
+            }
         }
     }
 
-    private IEnumerator RepositioningArrow()
+    private IEnumerator RepositioningArrow() // Esto podria ir en el script de bow
     {
         yield return new WaitForSeconds(bow.reloadTime + 0.2f);
         bow.ArrowInBow();

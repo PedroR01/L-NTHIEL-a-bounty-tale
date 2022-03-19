@@ -18,15 +18,25 @@ public class DialogueDictionary : MonoBehaviour
     {
         dialogues = new Dictionary<QuestAction, string>();
         dialogues.Add(QuestAction.Accept, "Let's go");
-        dialogues.Add(QuestAction.Reject, "No way");
+        dialogues.Add(QuestAction.Reject, "I don't care");
         dialogues.Add(QuestAction.Postpone, "Maybe later");
         talking = false;
         accepted = false;
     }
 
+    private void Update()
+    {
+        if (accepted && interact[1].activeInHierarchy)
+            return;
+        if (!talking && interact[1].activeInHierarchy && Input.GetKeyDown(KeyCode.E))
+            talking = true;
+    }
+
     private void UiInteractionMessage()
     {
-        //interactionMessage
+        interact[1].SetActive(true);
+        Text interactMessage = interact[1].GetComponentInChildren<Text>();
+        interactMessage.text = "Press ´E´ to talk";
     }
 
     private void LoadDialogues()
@@ -43,6 +53,9 @@ public class DialogueDictionary : MonoBehaviour
 
             buttonIndex++;
         }
+
+        Text questMessage = dialoguePanel[0].GetComponentInChildren<Text>();
+        questMessage.text = "Some soldiers take our village, please help us";
     }
 
     private void OnTriggerEnter(Collider other)
@@ -50,25 +63,31 @@ public class DialogueDictionary : MonoBehaviour
         if (accepted)
             return;
 
-        interact[1].SetActive(true);
         UiInteractionMessage();
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (accepted && !interact[0].activeInHierarchy)
+            return;
 
         if (talking && !accepted)
         {
             dialoguePanel[0].SetActive(true); //Hacer que con esto tambien muestre lo que te dice el npc
             dialoguePanel[1].SetActive(true);
             LoadDialogues();
+            talking = false;
+        }
+
+        if (accepted)
+        {
+            interact[0].SetActive(false);
+            interact[1].SetActive(false);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (accepted && !interact[0].activeInHierarchy)
-            return;
-
-        if (accepted)
-            interact[0].SetActive(false);
-
         interact[1].SetActive(false);
         dialoguePanel[0].SetActive(false);
         dialoguePanel[1].SetActive(false);
