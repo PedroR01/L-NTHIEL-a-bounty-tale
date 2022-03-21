@@ -21,9 +21,8 @@ public class Item_PickUp : Interactable
         if (canPickUp)
         {
             uiMessage.gameObject.SetActive(false);
-            if (item.isKey)
-
-                Destroy(gameObject);
+            //if (item.isKey)
+            Destroy(gameObject);
         }
     }
 
@@ -51,6 +50,7 @@ public class Item_PickUp : Interactable
                     uiMessage.gameObject.SetActive(false);
                     Destroy(gameObject);
                 }
+                Destroy(gameObject); // Aca hay codigo repetido, cambiarlo despues
             }
         }
     }

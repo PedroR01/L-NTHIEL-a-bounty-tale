@@ -213,7 +213,10 @@ public class Player_Stats : MonoBehaviour
 
     private void Muerto()
     {
-        Debug.Log("Moriste... Fin.");
+        Camera.main.GetComponent<GameState>().StateOfGame("GameOver");
+        GetComponent<PlayerController>().enabled = false;
+        GetComponent<Weapon_Controller>().enabled = false;
+        GetComponent<Player_Audio_Alternative>().enabled = false;
         dead = true;
         //this.gameObject.SetActive(false);
         //Destroy(this.gameObject);

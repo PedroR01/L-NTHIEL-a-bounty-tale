@@ -4,47 +4,49 @@ using UnityEngine;
 
 public class Player_Audio : MonoBehaviour
 {
-    private CharacterController cc;
+    [SerializeField] private Start_Button starting;
     private AudioSource aS;
+    [SerializeField] private AudioClip[] clips;
+    private AudioClip clip;
 
-    private float acumulatedDistance;
-    [HideInInspector] public float stepDistance;
+    private float timer;
+    private float timeToPlay;
 
     private void Start()
     {
-        cc = GetComponent<CharacterController>();
-        aS = FindObjectOfType<Audio_Manager>().GetComponent<AudioSource>();
-        ;
+        aS = GetComponent<AudioSource>();
+        timer = 0.75f;
+        timeToPlay = timer;
     }
 
     private void Update()
     {
-        CheckToPlayFootsteps();
+        if (!starting.start_Cinematic)
+            return;
+        else
+            CheckToPlayFootsteps();
     }
 
-    private void Steps(int number)
+    private void Steps(AudioClip clip)
     {
-        // if (cc.isGrounded && cc.velocity.magnitude > 2 && !aS.isPlaying)
-        FindObjectOfType<Audio_Manager>().Play("Footsteps" + number.ToString());
+        aS.PlayOneShot(clip);
     }
 
     private void CheckToPlayFootsteps()
     {
-        if (!cc.isGrounded)
-            return;
+        clip = GetRandomClip();
+        timeToPlay -= Time.deltaTime;
+        if (timeToPlay <= 0)
+        {
+            aS.volume = Random.Range(0.3f, 0.5f);
+            aS.pitch = Random.Range(1, 1.5f);
+            Steps(clip);
+            timeToPlay = timer;
+        }
+    }
 
-        if (cc.velocity.sqrMagnitude > 0)
-        {
-            acumulatedDistance += Time.deltaTime;
-            if (acumulatedDistance > stepDistance)
-            {
-                Steps(Random.Range(1, 4));
-                acumulatedDistance = 0;
-            }
-        }
-        else
-        {
-            acumulatedDistance = 0;
-        }
+    private AudioClip GetRandomClip()
+    {
+        return clips[Random.Range(0, clips.Length)];
     }
 }

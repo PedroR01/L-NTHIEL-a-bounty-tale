@@ -69,6 +69,6 @@ public class GameState : MonoBehaviour
     private IEnumerator Restarting()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -17,7 +17,7 @@ public abstract class Enemy : MonoBehaviour
     protected float timeToAttack, attackTimer;
     [SerializeField] protected bool shouldPatrol;
     [SerializeField] private Enemy_Behaviour patrolScript;
-    [SerializeField] private Transform originPosition;
+    public Transform originPosition;
     [SerializeField] private Transform objective;
     [SerializeField] private LayerMask targetLayer;
     [SerializeField] private LayerMask obstacleLayer;

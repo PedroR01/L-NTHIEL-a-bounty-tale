@@ -1843,7 +1843,6 @@ GameObject:
   - component: {fileID: 6262297014273097485}
   - component: {fileID: 6262297014273097495}
   - component: {fileID: 919132148157107433}
-  - component: {fileID: 3087159317115886616}
   - component: {fileID: 6262297014273097484}
   - component: {fileID: 6262297014273097492}
   - component: {fileID: 6854203034777666366}
@@ -1852,6 +1851,7 @@ GameObject:
   - component: {fileID: 919132148157107442}
   - component: {fileID: 8626600770377083191}
   - component: {fileID: 919132148157107441}
+  - component: {fileID: 4787479395798200293}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -1909,7 +1909,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2.7
   m_Radius: 0.35
-  m_SlopeLimit: 0
+  m_SlopeLimit: 100
   m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -1926,42 +1926,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 693417be4e7479d4da5dfa055849e5c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumSpeed: 4
+  maximumSpeed: 10
   rotationSpeed: 150
   jumpSpeed: 3
   jumpButtonGracePeriod: 0
   cameraSensivity: 1
-  cameraTransform: {fileID: 8518421424876516511, guid: aa30b401f3264b44bb96caf4240fa2c9, type: 3}
+  cameraTransform: {fileID: 0}
   followTransform: {fileID: 1372308078}
   characterController: {fileID: 6262297014273097495}
   speed: 0
---- !u!114 &3087159317115886616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6262297014273097474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67422dbc8c77c02479d23f3e455a318d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bow: {fileID: 1150552811}
-  firePowerSlider: {fileID: 2613077602685693923, guid: 854ab8da71cc03647bdc3cfc89ac8da2, type: 3}
-  maxFirePower: 100
-  firePower: 0
-  firePowerSpeed: 15
-  rotationSpeed: 5
-  minRotation: -50
-  maxRotation: 50
-  mouseY: 0
-  enemiesLayers:
-    serializedVersion: 2
-    m_Bits: 512
-  attackPointM: {fileID: 6496807660363825966}
-  attackRangeM: 0.5
-  arrowUsed: 0
 --- !u!114 &6262297014273097484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1974,7 +1947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15e7b31f8af18c468bd5adb13aa8315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 7231136128726040131, guid: 920c651a2821be64dbeb5beea68f7de3, type: 3}
+  gm: {fileID: 0}
   maxLife: 0
   lastLifeValue: 0
   actualLife: 0
@@ -2163,6 +2136,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepDistance: 0
+--- !u!114 &4787479395798200293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6262297014273097474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f834b2b99a5564d95d02962464fb4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bow: {fileID: 6610696455382659165}
+  firePowerSlider: {fileID: 0}
+  maxFirePower: 3000
+  firePower: 0
+  firePowerSpeed: 700
+  rotationSpeed: 5
+  minRotation: -50
+  maxRotation: 50
+  mouseY: 0
+  enemiesLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  attackPointM: {fileID: 6496807660363825966}
+  attackRangeM: 0.5
+  arrowUsed: 0
+  aiming: 0
 --- !u!1 &6336347731180315731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,7 +2947,7 @@ PrefabInstance:
     - target: {fileID: 2305904596831222689, guid: b4043eac667717644b8abd121b015399, type: 3}
       propertyPath: munitionController
       value: 
-      objectReference: {fileID: 3087159317115886616}
+      objectReference: {fileID: 0}
     - target: {fileID: 2352592483461227629, guid: b4043eac667717644b8abd121b015399, type: 3}
       propertyPath: m_RootBone
       value: 
@@ -3067,6 +3068,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8916513071359377687, guid: b4043eac667717644b8abd121b015399, type: 3}
+      propertyPath: munition
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916513071359377687, guid: b4043eac667717644b8abd121b015399, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 3260717719153026722}
+    - target: {fileID: 8916513071359377687, guid: b4043eac667717644b8abd121b015399, type: 3}
+      propertyPath: munitionController
+      value: 
+      objectReference: {fileID: 4787479395798200293}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4043eac667717644b8abd121b015399, type: 3}
 --- !u!4 &1996825094037996351 stripped
@@ -3074,9 +3087,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4302659293862965877, guid: b4043eac667717644b8abd121b015399, type: 3}
   m_PrefabInstance: {fileID: 2305904595697971530}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1150552811 stripped
+--- !u!114 &6610696455382659165 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2305904596831222689, guid: b4043eac667717644b8abd121b015399, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8916513071359377687, guid: b4043eac667717644b8abd121b015399, type: 3}
   m_PrefabInstance: {fileID: 2305904595697971530}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
