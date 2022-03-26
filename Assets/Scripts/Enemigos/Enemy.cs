@@ -4,13 +4,13 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField] protected Enemy_Data data; // Tengo que ver bien si esto iria aca o si iria en la clase hija
+    [SerializeField] protected Enemy_Data data;
 
     protected GameObject objStats;
 
     protected float maxLife;
     protected float actualLife;
-    protected float damage;
+    [HideInInspector] public float damage; // Public para poder aplicarlo a la flecha
     protected float armour;
     protected float speed;
 
@@ -18,7 +18,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected bool shouldPatrol;
     [SerializeField] private Enemy_Behaviour patrolScript;
     public Transform originPosition;
-    [SerializeField] private Transform objective;
+    [SerializeField] protected Transform objective;
     [SerializeField] private LayerMask targetLayer;
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private float fieldOfView;
@@ -31,6 +31,7 @@ public abstract class Enemy : MonoBehaviour
     public bool chase;
     public bool attack;
     public bool dead = false;
+    protected bool damageTakedCheck;
 
     public enum TiposDeEnemigos
     {
@@ -54,17 +55,14 @@ public abstract class Enemy : MonoBehaviour
         // Debug.Log("Tiempo: " + attackTimer);
         attackTimer -= Time.deltaTime;
         if (attackTimer <= 0)
-        {
             return true;
-        }
         else
-        {
             return false;
-        }
     }
 
     public void DamageReceived(float damageAmount) // Ver si este como dead deberian ser abstract o dejarlos asi. Falta la animacion al ser golpeado
     {
+        damageTakedCheck = true;
         actualLife -= damageAmount - armour;
         Debug.Log("Enemy life: " + actualLife);
     }
@@ -119,7 +117,7 @@ public abstract class Enemy : MonoBehaviour
         return fieldOfView;
     }
 
-    private Vector3 DirectionToObjective()
+    protected Vector3 DirectionToObjective()
     {
         Vector3 direccion = objective.position - transform.position;
         direccion.y = 0;
@@ -135,8 +133,6 @@ public abstract class Enemy : MonoBehaviour
 
         if (objAngle <= fieldOfView)
         {
-            /*if (Physics.Raycast(transform.position, DirectionToObjective(), out hit, rayMaxDistance, obstacleLayer)) // El error aca era porque el rayo ignora a todos los layers excepto el del obstaculo y impactaba en un uno
-                return;*/
             if (Physics.Raycast(transform.position, DirectionToObjective(), out hit, rayMaxDistance))
             {
                 if (hit.collider.tag == "Player")
@@ -156,7 +152,7 @@ public abstract class Enemy : MonoBehaviour
         transform.Translate(vectorObj.normalized * speed * Time.deltaTime, Space.World);
     }
 
-    private void Rotation(Vector3 direccion)
+    protected void Rotation(Vector3 direccion)
     {
         if (direccion != Vector3.zero)
         {
@@ -168,7 +164,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected float ObjectiveDistance()
     {
-        return Vector3.Distance(transform.position, objective.position); //Devuelve la magnitud de la distancia entre los 2 vectores
+        return Vector3.Distance(transform.position, objective.position); //Devuelve la distancia entre los 2 vectores
     }
 
     private bool MustMove(Vector3 vectorObj)
@@ -179,13 +175,14 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void Chase()
     {
         Vector3 objectiveDirection = DirectionToObjective();
-        if (ObjectiveDistance() > minDistance && ObjectiveDistance() < maxDistance)
+        if (ObjectiveDistance() > minDistance && ObjectiveDistance() < maxDistance || damageTakedCheck)
         {
+            //patrol = false;
+            //stand = false;
             MoveTo(objectiveDirection);
             Rotation(objectiveDirection);
         }
-
-        if (ObjectiveDistance() > maxDistance)
+        else if (ObjectiveDistance() > maxDistance)
         {
             patrol = true;
             chase = false;
@@ -204,6 +201,16 @@ public abstract class Enemy : MonoBehaviour
         patrolScript.enabled = !patrolScript.isActiveAndEnabled;
     }
 
+    private IEnumerator returnToPlace()
+    {
+        yield return new WaitForSeconds(5);
+        if (!chase)
+        {
+            damageTakedCheck = false;
+            patrol = true;
+        }
+    }
+
     protected void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Origin Position")
@@ -212,5 +219,14 @@ public abstract class Enemy : MonoBehaviour
             stand = true;
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        /*if (collision.gameObject.name == "Origin Position") // Intento de hacer que al recibir daño sin haber avistado al jugador
+        {                                                     // se dirija a buscarlo igualmente.
+            if (damageTakedCheck && !chase)
+                StartCoroutine(returnToPlace());
+        }*/
     }
 }

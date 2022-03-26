@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Stats : MonoBehaviour
 {
     private PlayerController pc;
-    [SerializeField] private Game_Manager gm;
+    private Player_Data pjData;
+    // [SerializeField] private Game_Manager gm;
 
     // Basic stats variables
 
@@ -38,8 +40,11 @@ public class Player_Stats : MonoBehaviour
     private void Start()
     {
         pc = GetComponent<PlayerController>();
-        gm.SetSkillTree(Game_Manager.mainSkillTree.Agility);
+        Game_Manager.gameInstance.SetSkillTree(Game_Manager.mainSkillTree.Agility);
         SkillTreeStats();
+
+        pjData = FindObjectOfType<Player_Data>();
+
         BasicStats();
         dead = false;
     }
@@ -69,29 +74,39 @@ public class Player_Stats : MonoBehaviour
         damageM = 15f;
         armour = 10f;
 
-        actualLife = maxLife;
-        lastLifeValue = actualLife;
-        actualStamina = maxStamina;
-        lastStaminaValue = actualStamina;
-
-        // Temporizadores
-        timeRecovering = false;
-        canUseStamina = true;
-        lifeTimer = 5;
-        actualTimeLife = lifeTimer;
-        staminaTimer = 5;
-        actualTimeStamina = staminaTimer;
-        // ------------
-
-        if (gm.GetSkillTree() != Game_Manager.mainSkillTree.Agility)
+        if (pjData.lifeData != 0 || pjData.staminaData != 0) // || pjData.arrowData == null
         {
-            agility = 0;
+            actualLife = pjData.lifeData;
+            lastLifeValue = actualLife;
+            actualStamina = pjData.staminaData;
+            lastStaminaValue = actualStamina;
+        }
+        else
+        {
+            actualLife = maxLife;
+            lastLifeValue = actualLife;
+            actualStamina = maxStamina;
+            lastStaminaValue = actualStamina;
+
+            // Temporizadores
+            timeRecovering = false;
+            canUseStamina = true;
+            lifeTimer = 5;
+            actualTimeLife = lifeTimer;
+            staminaTimer = 5;
+            actualTimeStamina = staminaTimer;
+            // ------------
+
+            if (Game_Manager.gameInstance.GetSkillTree() != Game_Manager.mainSkillTree.Agility)
+            {
+                agility = 0;
+            }
         }
     }
 
     private void SkillTreeStats()
     {
-        switch (gm.GetSkillTree())
+        switch (Game_Manager.gameInstance.GetSkillTree())
         {
             case Game_Manager.mainSkillTree.Agility:
                 Debug.Log("You have chosen the Agility path. Running and climbing trying to escape during your childhood forged your main attributes");
@@ -156,7 +171,7 @@ public class Player_Stats : MonoBehaviour
     private IEnumerator TimeWithoutDamage(float _lastLifeValue)
     {
         yield return new WaitForSeconds(1);
-        Debug.Log("Corrutina 1");
+        //Debug.Log("Corrutina 1");
         if (_lastLifeValue == actualLife)
             timeWithoutDamage = true;
         else if (_lastLifeValue != actualLife)
@@ -173,7 +188,7 @@ public class Player_Stats : MonoBehaviour
         if (canUseStamina == false && actualStamina >= 15f)
             canUseStamina = true;
 
-        if (lastStaminaValue != actualStamina && !timeRecovering || !timeRecovering)
+        if (lastStaminaValue != actualStamina && !timeRecovering)
             actualTimeStamina = staminaTimer;
 
         if (actualStamina >= maxStamina)
@@ -184,7 +199,6 @@ public class Player_Stats : MonoBehaviour
             if (actualTimeStamina <= 0)
             {
                 actualStamina += 5f * (Time.deltaTime / 2);
-                Debug.Log("Recuperando energia. Energia actual: " + actualStamina);
             }
         }
         else if (lastStaminaValue == actualStamina)
@@ -199,6 +213,7 @@ public class Player_Stats : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         lastStaminaValue = actualStamina; // Estos valores se actualizan luego de un minimo de tiempo
+        Debug.Log("Stamina Corrutine");
     }
 
     private IEnumerator UpdateLife()

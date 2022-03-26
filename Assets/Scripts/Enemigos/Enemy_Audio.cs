@@ -23,13 +23,20 @@ public class Enemy_Audio : MonoBehaviour
 
     private void Update()
     {
-        if (!audioSource.isPlaying)
-            PlayRespectiveSound();
+        PlayRespectiveSound();
     }
 
     private void PlayRespectiveSound()
     {
-        if (enemy.stand)
+        if (this.enemy.dead)
+        {
+            clip = GetRandomClip(9, 10);
+            DeathSounds();
+            Destroy(GetComponent<AudioSource>(), 3);
+            Destroy(this);
+        }
+
+        if (enemy.stand && !audioSource.isPlaying)
         {
             timer = Random.Range(10, 15);
             clip = GetRandomClip(0, 1);
@@ -38,18 +45,25 @@ public class Enemy_Audio : MonoBehaviour
         }
         if (enemy.patrol || enemy.chase)
         {
-            timer = 0.3f;
+            timer = 0.5f;
             clip = GetRandomClip(2, 5);
             Footsteps();
 
             //StartCoroutine(FootstepsTiming(0.2f)); // Bug con sonido. ¿?
         }
 
-        if (enemy.attack)
+        if (enemy.attack && !audioSource.isPlaying)
         {
             clip = GetRandomClip(6, 8);
             AttackingSounds(enemy.CanAttack());
         }
+    }
+
+    private void DeathSounds()
+    {
+        audioSource.volume = Random.Range(0.8f, 1f);
+        audioSource.pitch = Random.Range(0.75f, 1f);
+        audioSource.PlayOneShot(clip);
     }
 
     private void StandSounds()
@@ -58,7 +72,7 @@ public class Enemy_Audio : MonoBehaviour
         if (timeToPlay <= 0)
         {
             audioSource.volume = Random.Range(0.5f, 0.7f);
-            audioSource.pitch = Random.Range(1, 1.5f);
+            audioSource.pitch = Random.Range(1f, 1.5f);
             audioSource.PlayOneShot(clip);
             timeToPlay = timer;
         }
@@ -69,8 +83,8 @@ public class Enemy_Audio : MonoBehaviour
         timeToPlay -= Time.deltaTime;
         if (timeToPlay <= 0)
         {
-            audioSource.volume = Random.Range(0.3f, 0.5f);
-            audioSource.pitch = Random.Range(1, 1.5f);
+            audioSource.volume = Random.Range(0.7f, 0.9f);
+            audioSource.pitch = Random.Range(1f, 1.5f);
             audioSource.PlayOneShot(clip);
             timeToPlay = timer;
         }

@@ -1947,7 +1947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15e7b31f8af18c468bd5adb13aa8315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
   maxLife: 0
   lastLifeValue: 0
   actualLife: 0
@@ -1993,8 +1992,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 1, z: 0.5}
+  m_Size: {x: 1.4998091, y: 2.6888843, z: 1.4387665}
+  m_Center: {x: -0.067192614, y: 0.91532683, z: 0.102033615}
 --- !u!114 &6133693040322520484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2135,7 +2134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 298e3d663b5de5a43a1115f08878ae0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepDistance: 0
+  starting: {fileID: 0}
+  clips: []
 --- !u!114 &4787479395798200293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2149,7 +2149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bow: {fileID: 6610696455382659165}
-  firePowerSlider: {fileID: 0}
   maxFirePower: 3000
   firePower: 0
   firePowerSpeed: 700
@@ -3070,7 +3069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8916513071359377687, guid: b4043eac667717644b8abd121b015399, type: 3}
       propertyPath: munition
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8916513071359377687, guid: b4043eac667717644b8abd121b015399, type: 3}
       propertyPath: spawnPoint

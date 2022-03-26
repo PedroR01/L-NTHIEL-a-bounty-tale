@@ -43,5 +43,6 @@ public class Quest_Item : MonoBehaviour
         yield return new WaitForSeconds(2f);
         uiMessage.gameObject.SetActive(false);
         questInstruction = false;
+        questItem = false;
     }
 }

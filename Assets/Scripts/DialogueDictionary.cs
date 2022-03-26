@@ -73,6 +73,7 @@ public class DialogueDictionary : MonoBehaviour
 
         if (talking && !accepted)
         {
+            Cursor.lockState = CursorLockMode.None;
             dialoguePanel[0].SetActive(true); //Hacer que con esto tambien muestre lo que te dice el npc
             dialoguePanel[1].SetActive(true);
             LoadDialogues();
@@ -88,6 +89,7 @@ public class DialogueDictionary : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Cursor.lockState = CursorLockMode.Locked;
         interact[1].SetActive(false);
         dialoguePanel[0].SetActive(false);
         dialoguePanel[1].SetActive(false);
@@ -101,15 +103,18 @@ public class DialogueDictionary : MonoBehaviour
         {
             case QuestAction.Accept:
                 Debug.Log("Quest Accepted");
+                Cursor.lockState = CursorLockMode.Locked;
                 accepted = true;
                 break;
 
             case QuestAction.Reject:
                 Debug.Log("Quest Rejected");
+                Cursor.lockState = CursorLockMode.Locked;
                 break;
 
             case QuestAction.Postpone:
                 Debug.Log("Quest Postponed");
+                Cursor.lockState = CursorLockMode.Locked;
                 break;
 
             default:

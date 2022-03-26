@@ -883,6 +883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 119d9d538be7a6f4fa48a920c391617d, type: 2}
+  damage: 0
   shouldPatrol: 0
   patrolScript: {fileID: 1975395582}
   originPosition: {fileID: 0}
@@ -1045,6 +1046,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 93e2375703cfc9445b94007a531cd9f7, type: 3}
   - {fileID: 8300000, guid: 4f38cfc057803284a8ce039fd8f26215, type: 3}
   - {fileID: 8300000, guid: b1b0134244e36784b9a6d58c192d76c9, type: 3}
+  - {fileID: 8300000, guid: 7cf9167a5239d254a84b44cf35c8d481, type: 3}
+  - {fileID: 8300000, guid: cb7c6186be463124d898b380bf56317c, type: 3}
 --- !u!1 &1475544927643532202
 GameObject:
   m_ObjectHideFlags: 0

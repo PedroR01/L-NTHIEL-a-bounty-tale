@@ -29,12 +29,14 @@ public class GameState : MonoBehaviour
         if (Game_Manager.gameInstance.GetGameState() == Game_Manager.gameState.Play)
         {
             Debug.LogWarning("Playing");
+            Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
         }
 
         if (Game_Manager.gameInstance.GetGameState() == Game_Manager.gameState.Pause)
         {
             Debug.LogWarning("Paused");
+            Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
             //filtro de postprocessing para que se entienda que se paro el tiempo
         }

@@ -197,17 +197,4 @@ public class PlayerController : MonoBehaviour
     {
         abilities.DashAbility();
     }
-
-    private void OnApplicationFocus(bool focus)
-    {
-        focus = !focus;
-        if (focus)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
-    }
 }

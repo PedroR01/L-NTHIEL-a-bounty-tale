@@ -6,6 +6,7 @@ public class Guardian : Enemy
 {
     private void Start()
     {
+        damageTakedCheck = false;
         EnemyStats();
         maxAttackDist = minDistance;
         if (shouldPatrol)
@@ -16,7 +17,7 @@ public class Guardian : Enemy
 
         objStats = GameObject.FindGameObjectWithTag("Player");
 
-        attackTimer = 2f;
+        attackTimer = 1f;
         timeToAttack = attackTimer;
     }
 
@@ -40,14 +41,7 @@ public class Guardian : Enemy
 
     protected void Attack()
     {
-        if (ObjectiveDistance() < maxAttackDist && CanAttack() == true)
-        {
-            objStats.GetComponent<Player_Stats>().RecibirDanio(damage);
-            Debug.Log("Vida actual del player" + objStats.GetComponent<Player_Stats>().actualLife + " Danio hecho: " + damage);
-            if (CanAttack())
-                attackTimer = timeToAttack;
-        }
-        else if (ObjectiveDistance() > maxAttackDist)
+        if (ObjectiveDistance() > maxAttackDist)
         {
             chase = true;
             patrol = false;
@@ -69,6 +63,17 @@ public class Guardian : Enemy
     protected override void Dead()
     {
         dead = true;
+        Destroy(GetComponent<Rigidbody>());
         Destroy(this, 3);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 10 && CanAttack())
+        {
+            objStats.GetComponent<Player_Stats>().RecibirDanio(damage);
+            Debug.Log("Vida actual del player" + objStats.GetComponent<Player_Stats>().actualLife + " Danio hecho: " + damage);
+            attackTimer = timeToAttack;
+        }
     }
 }

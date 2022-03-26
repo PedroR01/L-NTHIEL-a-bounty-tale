@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
 
     private void Awake()
     {
-        if (inventoryInstance != null)
+        if (inventoryInstance != null && inventoryInstance != this)
         {
             Debug.LogWarning("You have more than 1 instance of Inventory class");
             return;

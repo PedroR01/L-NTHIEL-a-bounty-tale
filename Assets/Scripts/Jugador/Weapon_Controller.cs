@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Weapon_Controller : MonoBehaviour
 {
     [SerializeField] private Bow bow;
-    [SerializeField] private Slider firePowerSlider; // Cambiar esto despues a un script aparte con todo lo de UI
+    private Slider firePowerSlider;
     [SerializeField] private float maxFirePower;
     [SerializeField] private float firePower;
     [SerializeField] private float firePowerSpeed;
@@ -26,6 +26,7 @@ public class Weapon_Controller : MonoBehaviour
 
     private void Start()
     {
+        firePowerSlider = FindObjectOfType<Slider>();
         damageM = 10f;
         aiming = false;
         //bow.Reload();

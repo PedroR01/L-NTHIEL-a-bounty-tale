@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemies_Wave_Trigger : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class Enemies_Wave_Trigger : MonoBehaviour
             {
                 origin = enemies[i].GetComponent<Guardian>().originPosition.position;
                 enemies[i].transform.position = origin;
+                enemies[i].GetComponent<NavMeshAgent>().enabled = true;
                 enemies[i].GetComponent<Guardian>().chase = true;
             }
     }

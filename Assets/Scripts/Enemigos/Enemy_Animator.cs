@@ -55,7 +55,8 @@ public class Enemy_Animator : MonoBehaviour
                 anim.SetBool("patrol", false);
                 anim.SetBool("chasing", false);
                 anim.SetBool("fighting", true);
-                anim.SetTrigger("attack");
+                if (behav.CanAttack())
+                    anim.SetTrigger("attack");
                 //anim.ResetTrigger("attack");
             }
         }

@@ -9,16 +9,17 @@ public class Archer : Enemy
 
     private void Start()
     {
+        damageTakedCheck = false;
         EnemyStats();
         if (shouldPatrol)
         {
             ChangePatrolState();
             shouldPatrol = false;
         }
-        objStats = GameObject.FindGameObjectWithTag("Player");
+        //objStats = GameObject.FindGameObjectWithTag("Player");
 
-        attackTimer = 3f;
-        timeToAttack = attackTimer;
+        timeToAttack = 7f;
+        attackTimer = timeToAttack;
     }
 
     private void Update()
@@ -37,12 +38,16 @@ public class Archer : Enemy
 
     protected void Attack()
     {
-        Debug.Log("FIRE!");
+        Rotation(DirectionToObjective());
         if (ObjectiveDistance() < maxAttackDist && CanAttack())
         {
             Rigidbody rb = Instantiate(prefab, prefabSpawn.position, prefabSpawn.rotation).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 3f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            Debug.Log("Distancia al objetivo: " + ObjectiveDistance());
+            rb.AddForce(transform.forward * ObjectiveDistance() * 50f, ForceMode.Force);
+            rb.AddForce(new Vector3(0, ObjectiveDistance() * 15f, 0), ForceMode.Force);
+
+            // rb.AddForce(transform.forward, ForceMode.Force);
+            // rb.AddForce(transform.up * 8f, ForceMode.Force);
             //Añadir particulas para saber donde va la flecha
 
             if (CanAttack())
@@ -55,7 +60,7 @@ public class Archer : Enemy
         base.Chase();
         if (ObjectiveDistance() > minDistance && ObjectiveDistance() < maxAttackDist)
         {
-            Debug.Log("aaaaa");
+            Debug.Log("Archer chase state");
             attack = true;
             patrol = false;
             chase = false;
@@ -65,6 +70,7 @@ public class Archer : Enemy
     protected override void Dead()
     {
         dead = true;
+        Destroy(GetComponent<Rigidbody>());
         Destroy(this, 3);
     }
 }
