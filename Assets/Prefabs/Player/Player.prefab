@@ -1850,7 +1850,6 @@ GameObject:
   - component: {fileID: 6133693040322520484}
   - component: {fileID: 919132148157107442}
   - component: {fileID: 8626600770377083191}
-  - component: {fileID: 919132148157107441}
   - component: {fileID: 4787479395798200293}
   m_Layer: 10
   m_Name: Player
@@ -2121,21 +2120,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0909de896e9029541b92ae05fe15e4b6, type: 3}
   - {fileID: 8300000, guid: 14ae706fef2303e4cb71112dbd5d250b, type: 3}
   - {fileID: 8300000, guid: d15f7338d693f0343843a6b9096d27f6, type: 3}
+  - {fileID: 8300000, guid: 6223dde34f59c9347bb95b05a70c4cf9, type: 3}
+  - {fileID: 8300000, guid: 470d35b1638f4234e895ca3e65fb00dc, type: 3}
+  - {fileID: 8300000, guid: 2562f28a52b24ed45a3b563b9ad8ac73, type: 3}
+  - {fileID: 8300000, guid: 489deb3999083354788207249b14b19e, type: 3}
+  - {fileID: 8300000, guid: 190ec23fd5086f34bb50a8607933ce8e, type: 3}
   stepDistance: 0
---- !u!114 &919132148157107441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6262297014273097474}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 298e3d663b5de5a43a1115f08878ae0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  starting: {fileID: 0}
-  clips: []
 --- !u!114 &4787479395798200293
 MonoBehaviour:
   m_ObjectHideFlags: 0

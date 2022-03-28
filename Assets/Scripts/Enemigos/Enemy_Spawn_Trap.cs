@@ -7,6 +7,7 @@ public class Enemy_Spawn_Trap : MonoBehaviour
     [SerializeField] private GameObject prefab;
     [SerializeField] private LayerMask triggerTarget;
     [SerializeField] private float rayRange;
+    private Enemy behaviour;
     private float randomZ, randomX;
     private Transform tf;
 
@@ -31,8 +32,11 @@ public class Enemy_Spawn_Trap : MonoBehaviour
         {
             randomZ = Random.Range(-12, 5);
             randomX = Random.Range(-19, 22);
+            behaviour = prefab.GetComponent<Enemy>();
+            behaviour.objective = hit.transform;
+            behaviour.originPosition = hit.transform;
             Instantiate(prefab, tf.position + tfOffset, prefab.transform.rotation);
-            Instantiate(prefab, tf.position + tfOffset, prefab.transform.rotation);
+
             this.GetComponent<Enemy_Spawn_Trap>().enabled = false;
         }
     }

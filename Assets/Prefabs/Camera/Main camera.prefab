@@ -161,7 +161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8518421424552955231}
   m_LocalRotation: {x: -0.120768666, y: -0.14142044, z: -0.017385108, w: 0.98240167}
-  m_LocalPosition: {x: 0, y: 6.6292953e-15, z: 0.0000038146973}
+  m_LocalPosition: {x: 0.09464351, y: 0, z: -0.33232316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8518421425008175702}
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
-    NearClipPlane: 0.1
+    NearClipPlane: 0.05
     FarClipPlane: 5000
     Dutch: 0
     LensShift: {x: 0, y: 0}
@@ -226,12 +226,12 @@ MonoBehaviour:
   m_AvoidObstacles: 1
   m_DistanceLimit: 0.1
   m_MinimumOcclusionTime: 0
-  m_CameraRadius: 0.1
+  m_CameraRadius: 0.8
   m_Strategy: 1
-  m_MaximumEffort: 4
-  m_SmoothingTime: 0.11
-  m_Damping: 0.65
-  m_DampingWhenOccluded: 0.58
+  m_MaximumEffort: 5
+  m_SmoothingTime: 0.1
+  m_Damping: 0.1
+  m_DampingWhenOccluded: 0.1
   m_OptimalTargetDistance: 0
 --- !u!114 &8518421424552955219
 MonoBehaviour:
@@ -329,7 +329,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 0.05
   far clip plane: 5000
   field of view: 40
   orthographic: 0
@@ -522,7 +522,7 @@ MonoBehaviour:
   isGlobal: 1
   blendDistance: 0
   weight: 1
-  priority: 1
+  priority: 0
 --- !u!1 &8518421424997456869
 GameObject:
   m_ObjectHideFlags: 0

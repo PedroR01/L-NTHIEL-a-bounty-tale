@@ -4,49 +4,65 @@ using UnityEngine;
 
 public class Player_Audio : MonoBehaviour
 {
-    [SerializeField] private Start_Button starting;
-    private AudioSource aS;
+    private CharacterController cc;
+    private AudioSource audioSource;
     [SerializeField] private AudioClip[] clips;
     private AudioClip clip;
 
-    private float timer;
-    private float timeToPlay;
+    private float acumulatedDistance;
+    [HideInInspector] public float stepDistance;
 
     private void Start()
     {
-        aS = GetComponent<AudioSource>();
-        timer = 0.75f;
-        timeToPlay = timer;
+        cc = GetComponent<CharacterController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        if (!starting.start_Cinematic)
+        if (!cc.isGrounded)
             return;
-        else
-            CheckToPlayFootsteps();
-    }
 
-    private void Steps(AudioClip clip)
-    {
-        aS.PlayOneShot(clip);
-    }
-
-    private void CheckToPlayFootsteps()
-    {
-        clip = GetRandomClip();
-        timeToPlay -= Time.deltaTime;
-        if (timeToPlay <= 0)
+        if (cc.isGrounded && !audioSource.isPlaying && cc.velocity.sqrMagnitude > 0)
         {
-            aS.volume = Random.Range(0.3f, 0.5f);
-            aS.pitch = Random.Range(1, 1.5f);
-            Steps(clip);
-            timeToPlay = timer;
+            clip = GetRandomClip(0, 3);
+            Play();
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            clip = clips[4];
+            audioSource.PlayOneShot(clip);
+        }
+
+        if (Input.GetMouseButtonDown(1) && Input.GetMouseButtonDown(0))
+        {
+            clip = GetRandomClip(5, 6);
+            audioSource.PlayOneShot(clip);
+        }
+
+        if (Input.GetMouseButton(1) && Input.GetMouseButtonUp(0))
+        {
+            clip = GetRandomClip(7, 8);
+            audioSource.PlayOneShot(clip);
         }
     }
 
-    private AudioClip GetRandomClip()
+    private void Play()
     {
-        return clips[Random.Range(0, clips.Length)];
+        acumulatedDistance += Time.deltaTime;
+        if (acumulatedDistance > stepDistance)
+        {
+            audioSource.volume = Random.Range(0.3f, 0.5f);
+            audioSource.pitch = Random.Range(1, 1.5f);
+            //audioSource.Play();
+            audioSource.PlayOneShot(clip);
+            acumulatedDistance = 0;
+        }
+    }
+
+    private AudioClip GetRandomClip(int startRange, int endRange)
+    {
+        return clips[Random.Range(startRange, endRange)];
     }
 }

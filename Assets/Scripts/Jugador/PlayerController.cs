@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     // private float crouchVolume = 0.1f;
     // private float walkVolume; //random 0.3f 0.7f
 
-    private Player_Audio_Alternative playerFootsteps;
+    private Player_Audio playerFootsteps;
 
     private void Start()
     {
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         abilities = GetComponent<Skill_Tree_Powers>();
         originalStepOffset = characterController.stepOffset;
 
-        playerFootsteps = GetComponent<Player_Audio_Alternative>();
+        playerFootsteps = GetComponent<Player_Audio>();
         notWalkSound = false;
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Cinemachine;
 
 public class Aiming_Camera : MonoBehaviour
@@ -11,8 +12,17 @@ public class Aiming_Camera : MonoBehaviour
 
     //Cinemachine.CinemachineImpulseSource source;
 
+    private void Start()
+    {
+        if (aimReticle == null)
+            aimReticle = GameObject.Find("Reticle");
+    }
+
     private void Update()
     {
+        if (aimReticle == null)
+            aimReticle = GameObject.Find("Reticle");
+
         ChangeCamera();
     }
 
@@ -28,13 +38,17 @@ public class Aiming_Camera : MonoBehaviour
         {
             lookCamera.gameObject.SetActive(true);
             aimCamera.gameObject.SetActive(false);
-            aimReticle.SetActive(false);
+            //aimReticle.SetActive(false);
+            aimReticle.GetComponent<Image>().enabled = false;
+            aimReticle.GetComponentInChildren<Image>().enabled = false;
         }
     }
 
     private IEnumerator ShowReticle()
     {
         yield return new WaitForSeconds(0.25f);
-        aimReticle.SetActive(enabled);
+        //aimReticle.SetActive(enabled);
+        aimReticle.GetComponent<Image>().enabled = true;
+        aimReticle.GetComponentInChildren<Image>().enabled = true;
     }
 }

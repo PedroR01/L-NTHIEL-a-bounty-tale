@@ -10,10 +10,15 @@ public class Show_Canvas : MonoBehaviour
     {
         if (this != null)
             DontDestroyOnLoad(this);
+        if (stats_Timer == null)
+            stats_Timer = FindObjectOfType<Player_Stats>();
     }
 
     private void Update()
     {
+        if (stats_Timer == null)
+            stats_Timer = FindObjectOfType<Player_Stats>();
+
         if (stats_Timer.timeWithoutDamage) // Fijarse de añadir un booleano para que una vez que este suscripto no se vuelva a suscribir
             Subscribe();
         //Debug.Log("UI SUBSCRIBED");

@@ -9,7 +9,7 @@ public abstract class Enemy : MonoBehaviour
     protected GameObject objStats;
 
     protected float maxLife;
-    protected float actualLife;
+    public float actualLife;
     [HideInInspector] public float damage; // Public para poder aplicarlo a la flecha
     protected float armour;
     protected float speed;
@@ -18,7 +18,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected bool shouldPatrol;
     [SerializeField] private Enemy_Behaviour patrolScript;
     public Transform originPosition;
-    [SerializeField] protected Transform objective;
+    public Transform objective;
     [SerializeField] private LayerMask targetLayer;
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private float fieldOfView;

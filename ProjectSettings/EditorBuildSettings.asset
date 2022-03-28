@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Village_Level2/Village_Level2.unity
     guid: 2c09c751e38baa0438abcb25c330c91d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Castle_Level3/Castle_Level3.unity
+    guid: d062da61509a10d469c6b56b6543c19b
   m_configObjects: {}

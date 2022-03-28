@@ -213,7 +213,6 @@ public class Player_Stats : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         lastStaminaValue = actualStamina; // Estos valores se actualizan luego de un minimo de tiempo
-        Debug.Log("Stamina Corrutine");
     }
 
     private IEnumerator UpdateLife()
@@ -231,7 +230,7 @@ public class Player_Stats : MonoBehaviour
         Camera.main.GetComponent<GameState>().StateOfGame("GameOver");
         GetComponent<PlayerController>().enabled = false;
         GetComponent<Weapon_Controller>().enabled = false;
-        GetComponent<Player_Audio_Alternative>().enabled = false;
+        GetComponent<Player_Audio>().enabled = false;
         dead = true;
         //this.gameObject.SetActive(false);
         //Destroy(this.gameObject);

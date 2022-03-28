@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Item_PickUp : Interactable
 {
     [SerializeField] private Scriptable_Item item;
-    [SerializeField] private GameObject uiMessage;
+    //[SerializeField] private GameObject uiMessage;
 
     protected override void Interact()
     {
@@ -20,24 +20,19 @@ public class Item_PickUp : Interactable
 
         if (canPickUp)
         {
-            uiMessage.gameObject.SetActive(false);
-            //if (item.isKey)
+            uiMessage.GetComponent<Image>().enabled = false;
+            uiMessage.GetComponentInChildren<Text>().enabled = false;
             Destroy(gameObject);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 10)
+        if (other.gameObject.layer == 10 && uiMessage.activeInHierarchy)
         {
-            if (uiMessage.activeInHierarchy)
-                return;
-            else
-            {
-                Text text = uiMessage.GetComponentInChildren<Text>();
-                text.text = "Press ´E´ to pick up " + item.name;
-                uiMessage.gameObject.SetActive(true);
-            }
+            Text text = uiMessage.GetComponentInChildren<Text>();
+            text.text = "Press ´E´ to pick up " + item.name;
+            //uiMessage.gameObject.SetActive(true);
         }
         if (other.gameObject.layer == 10 && Input.GetKeyDown(KeyCode.E)) // Ver por que no funciona.
         {
@@ -47,7 +42,7 @@ public class Item_PickUp : Interactable
             {
                 if (item.isKey)
                 {
-                    uiMessage.gameObject.SetActive(false);
+                    //uiMessage.gameObject.SetActive(false);
                     Destroy(gameObject);
                 }
                 Destroy(gameObject); // Aca hay codigo repetido, cambiarlo despues
@@ -62,7 +57,10 @@ public class Item_PickUp : Interactable
             if (!uiMessage.activeInHierarchy)
                 return;
             else
-                uiMessage.gameObject.SetActive(false);
+            {
+                uiMessage.GetComponent<Image>().enabled = false;
+                uiMessage.GetComponentInChildren<Text>().enabled = false;
+            }
         }
     }
 }

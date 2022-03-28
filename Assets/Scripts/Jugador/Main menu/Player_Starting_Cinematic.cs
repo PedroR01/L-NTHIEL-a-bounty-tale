@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Player_Starting_Cinematic : MonoBehaviour
 {
+    [SerializeField] private GameObject finishCard;
+    [SerializeField] private Load_Next_Level finished;
+
     [SerializeField] private Start_Button starting;
     private Animator anim;
     private bool walk;
@@ -19,6 +22,9 @@ public class Player_Starting_Cinematic : MonoBehaviour
 
     private void Start()
     {
+        if (finished.gameFinished)
+            finishCard.SetActive(true);
+
         anim = GetComponent<Animator>();
 
         anim.SetInteger("mov_Values", 0);

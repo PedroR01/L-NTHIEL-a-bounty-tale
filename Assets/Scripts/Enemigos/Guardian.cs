@@ -64,7 +64,7 @@ public class Guardian : Enemy
     {
         dead = true;
         Destroy(GetComponent<Rigidbody>());
-        Destroy(this, 3);
+        Destroy(this);
     }
 
     private void OnTriggerEnter(Collider other)
