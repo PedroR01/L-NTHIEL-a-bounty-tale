@@ -64,6 +64,7 @@ public class Guardian : Enemy
     {
         dead = true;
         Destroy(GetComponent<Rigidbody>());
+        Destroy(GetComponent<CapsuleCollider>());
         Destroy(this);
     }
 

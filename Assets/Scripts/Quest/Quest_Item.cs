@@ -31,20 +31,15 @@ public class Quest_Item : MonoBehaviour
 
     private void QuestUpdated()
     {
-        if (uiMessage.activeInHierarchy)
-            return;
-        else
-        {
-            Text text = uiMessage.GetComponentInChildren<Text>();
-            uiMessage.GetComponent<Image>().enabled = true;
-            text.enabled = true;
-            text.text = "ESCAPE NOW! THE GUARDS ARE AFTER YOU";
-            //uiMessage.gameObject.SetActive(true);
-            canLeave.enabled = true;
-            questItem = true;
+        Text text = uiMessage.GetComponentInChildren<Text>();
+        uiMessage.GetComponent<Image>().enabled = true;
+        text.enabled = true;
+        text.text = "ESCAPE NOW! THE GUARDS ARE AFTER YOU";
+        //uiMessage.gameObject.SetActive(true);
+        canLeave.enabled = true;
+        questItem = true;
 
-            StartCoroutine(InstructionsTime());
-        }
+        StartCoroutine(InstructionsTime());
     }
 
     private IEnumerator InstructionsTime()

@@ -30,7 +30,9 @@ public class Item_PickUp : Interactable
     {
         if (other.gameObject.layer == 10 && uiMessage.activeInHierarchy)
         {
+            uiMessage.GetComponent<Image>().enabled = true;
             Text text = uiMessage.GetComponentInChildren<Text>();
+            text.enabled = true;
             text.text = "Press ´E´ to pick up " + item.name;
             //uiMessage.gameObject.SetActive(true);
         }

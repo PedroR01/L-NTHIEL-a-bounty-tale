@@ -16,6 +16,8 @@ public class Arrow : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        GetComponent<CapsuleCollider>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
 
         damage = 75f;
         velocity = 1.5f;
@@ -28,6 +30,8 @@ public class Arrow : MonoBehaviour
         //rb.AddTorque(transform.right * torque);
         /* source = GetComponent<Cinemachine.CinemachineImpulseSource>();
         source.GenerateImpulse(Camera.main.transform.forward); */ // Seria una especie de recoil. Para ajustarlo mejor ir a su componente en el prefab
+        GetComponent<CapsuleCollider>().enabled = true;
+        GetComponent<BoxCollider>().enabled = true;
         rb.useGravity = true;
         transform.parent = null;
         //Destroy(this.gameObject, 2);

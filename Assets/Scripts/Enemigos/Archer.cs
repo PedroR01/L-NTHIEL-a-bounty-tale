@@ -71,6 +71,7 @@ public class Archer : Enemy
     {
         dead = true;
         Destroy(GetComponent<Rigidbody>());
+        Destroy(GetComponent<CapsuleCollider>());
         Destroy(this);
     }
 }

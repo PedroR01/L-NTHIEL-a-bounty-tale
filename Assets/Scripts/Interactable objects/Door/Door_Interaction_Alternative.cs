@@ -35,26 +35,31 @@ public class Door_Interaction_Alternative : MonoBehaviour
     {
         if (other.gameObject.layer == 10 && !Inventory.inventoryInstance.CheckInventoryFor("Key"))
         {
-            if (uiMessage.activeInHierarchy)
-                return;
+            if (uiMessage == null)
+                uiMessage = GameObject.Find("Instructions Panel");
             else
             {
+                uiMessage.GetComponent<Image>().enabled = true;
+                // uiMessage.GetComponentInChildren<Text>().enabled = true;
                 Text text = uiMessage.GetComponentInChildren<Text>();
+                text.enabled = true;
                 text.text = "You need a key";
-                uiMessage.gameObject.SetActive(true);
+                // uiMessage.gameObject.SetActive(true);
             }
         }
         else if (other.gameObject.layer == 10 && Inventory.inventoryInstance.CheckInventoryFor("Key"))
         {
             Debug.Log("You can open the door");
             canOpen = true;
-            if (uiMessage.activeInHierarchy)
-                return;
+            if (uiMessage == null)
+                uiMessage = GameObject.Find("Instructions Panel");
             else
             {
+                uiMessage.GetComponent<Image>().enabled = true;
                 Text text = uiMessage.GetComponentInChildren<Text>();
+                text.enabled = true;
                 text.text = "Press ´E´ to interact";
-                uiMessage.gameObject.SetActive(true);
+                //uiMessage.gameObject.SetActive(true);
             }
         }
     }
@@ -66,6 +71,10 @@ public class Door_Interaction_Alternative : MonoBehaviour
         if (!uiMessage.activeInHierarchy)
             return;
         else
-            uiMessage.gameObject.SetActive(false);
+        {
+            uiMessage.GetComponent<Image>().enabled = false;
+            uiMessage.GetComponentInChildren<Text>().enabled = false;
+            //uiMessage.gameObject.SetActive(false);
+        }
     }
 }
