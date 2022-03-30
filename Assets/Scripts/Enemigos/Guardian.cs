@@ -8,7 +8,7 @@ public class Guardian : Enemy
     {
         damageTakedCheck = false;
         EnemyStats();
-        maxAttackDist = minDistance + 1.5f;
+        maxAttackDist = minDistance + 1.3f;
         if (shouldPatrol)
         {
             ChangePatrolState();
@@ -41,19 +41,18 @@ public class Guardian : Enemy
 
     protected void Attack()
     {
-        if (ObjectiveDistance() > maxAttackDist)
+        if (ObjectiveDistance() > maxAttackDist && CanAttack())
         {
-            chase = true;
-            patrol = false;
-            attack = false;
+            StartCoroutine(ChaseDelay());
         }
     }
 
     protected override void Chase()
     {
         base.Chase();
-        if (ObjectiveDistance() < minDistance)
+        if (ObjectiveDistance() >= minDistance && ObjectiveDistance() < maxAttackDist)
         {
+            damageTakedCheck = false;
             attack = true;
             patrol = false;
             chase = false;
@@ -66,6 +65,14 @@ public class Guardian : Enemy
         Destroy(GetComponent<Rigidbody>());
         Destroy(GetComponent<CapsuleCollider>());
         Destroy(this);
+    }
+
+    private IEnumerator ChaseDelay()
+    {
+        yield return new WaitForSeconds(0.6f);
+        chase = true;
+        patrol = false;
+        attack = false;
     }
 
     private void OnTriggerEnter(Collider other)

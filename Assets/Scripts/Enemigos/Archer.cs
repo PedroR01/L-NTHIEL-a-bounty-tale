@@ -49,7 +49,7 @@ public class Archer : Enemy
             Rigidbody rb = Instantiate(prefab, prefabSpawn.position, prefabSpawn.rotation).GetComponent<Rigidbody>();
             Debug.Log("Distancia al objetivo: " + ObjectiveDistance());
             rb.AddForce(transform.forward * ObjectiveDistance() * 50f, ForceMode.Force);
-            rb.AddForce(new Vector3(0, ObjectiveDistance() * 15f, 0), ForceMode.Force);
+            rb.AddForce(new Vector3(0, ObjectiveDistance() * 12f, 0), ForceMode.Force);
 
             if (CanAttack())
                 attackTimer = timeToAttack;
@@ -61,7 +61,7 @@ public class Archer : Enemy
         base.Chase();
         if (ObjectiveDistance() > minDistance && ObjectiveDistance() < maxAttackDist)
         {
-            Debug.Log("Archer chase state");
+            damageTakedCheck = false;
             attack = true;
             patrol = false;
             chase = false;

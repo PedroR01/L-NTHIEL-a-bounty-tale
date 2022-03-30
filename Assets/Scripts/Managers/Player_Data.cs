@@ -11,12 +11,15 @@ public class Player_Data : MonoBehaviour
     public float munitionData;
     public bool getDataBeforeLoad;
 
-    private void Start()
+    private void Awake()
     {
         playerData = FindObjectOfType<Player_Stats>();
         arrowData = FindObjectOfType<Bow>();
         getDataBeforeLoad = false;
+    }
 
+    private void Start()
+    {
         //Ver si esto hace falta porque va en el gamemanager y tiene dontdestroyonload
         lifeData = 0;
         staminaData = 0;

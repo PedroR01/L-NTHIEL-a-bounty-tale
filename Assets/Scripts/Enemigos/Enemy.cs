@@ -179,7 +179,7 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void Chase()
     {
         Vector3 objectiveDirection = DirectionToObjective();
-        if (ObjectiveDistance() > minDistance && ObjectiveDistance() < maxDistance || damageTakedCheck)
+        if (ObjectiveDistance() > maxAttackDist && ObjectiveDistance() < maxDistance || damageTakedCheck)
         {
             //patrol = false;
             //stand = false;

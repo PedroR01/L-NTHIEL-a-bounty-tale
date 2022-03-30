@@ -36,7 +36,7 @@ public class Bow : MonoBehaviour
 
     public void Reload()
     {
-        if (isReloading && arrayArrow[arrowIndex] != null || munition == 0) return; // Si hay algun bug con la aparicion de flechas, este condicional puede ser el problema.
+        if (isReloading && arrayArrow[arrowIndex] != null || munition == 0) return;
         isReloading = true;
         lastMunitionCheck = munition;
 
@@ -48,8 +48,7 @@ public class Bow : MonoBehaviour
         }
         else if (munitionController.aiming)
         {
-            arrayArrow[arrowIndex].gameObject.SetActive(true);
-            isReloading = false;
+            StartCoroutine(Reactivate());
         }
         else if (!munitionController.aiming && !munitionController.arrowUsed)
         {
@@ -69,7 +68,7 @@ public class Bow : MonoBehaviour
             arrowIndex = 0;
 
         arrayArrow[arrowIndex].gameObject.SetActive(true);
-        arrayArrow[arrowIndex].transform.localPosition = Vector3.zero; // Ver donde poner esto si se spawnea mal la flecha
+        arrayArrow[arrowIndex].transform.localPosition = Vector3.zero;
         isReloading = false;
     }
 
@@ -89,7 +88,7 @@ public class Bow : MonoBehaviour
 
     public void Fire(float firePower)
     {
-        if (isReloading || arrayArrow[arrowIndex] == null || munition == 0) return; // Ver estos condicionales en caso de que no funcione
+        if (isReloading || arrayArrow[arrowIndex] == null || munition == 0) return;
         var force = releasePoint.TransformDirection(Vector3.forward * firePower);
         //Arrow theArrow = currentArrow.GetComponent<Arrow>();
         arrayArrow[arrowIndex].Fly(force);
@@ -108,5 +107,12 @@ public class Bow : MonoBehaviour
     {
         Debug.Log("Flecha borrada");
         // arrayArrow[arrowIndex].gameObject.SetActive(false);
+    }
+
+    private IEnumerator Reactivate()
+    {
+        yield return new WaitForSeconds(reloadTime);
+        arrayArrow[arrowIndex].gameObject.SetActive(true);
+        isReloading = false;
     }
 }

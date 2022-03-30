@@ -99,29 +99,26 @@ public class Weapon_Controller : MonoBehaviour
                 arrowUsed = false;
             }
 
-            if (charging && firePower < maxFirePower) // Esto podria ir como un else if por debajo de el if de la linea 80
+            if (charging && firePower < maxFirePower)
             {
                 firePower += Time.deltaTime * firePowerSpeed;
             }
             if (charging && Input.GetMouseButtonUp(0))
             {
-                bow.Fire(firePower); // Esto deberia ir en un FixedUpdate?
+                bow.Fire(firePower);
                 firePower = 0;
                 arrowUsed = true;
                 charging = false;
             }
 
             if (charging)
-            {
                 firePowerSlider.value = firePower;
-                //firePowerSlider.value = 1;
-            }
         }
     }
 
-    private IEnumerator RepositioningArrow() // Esto podria ir en el script de bow
+    private IEnumerator RepositioningArrow()
     {
-        yield return new WaitForSeconds(bow.reloadTime + 0.2f);
+        yield return new WaitForSeconds(bow.reloadTime);
         bow.ArrowInBow();
     }
 

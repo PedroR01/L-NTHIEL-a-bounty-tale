@@ -26,8 +26,7 @@ public class Arrow : MonoBehaviour
 
     public void Fly(Vector3 force)
     {
-        rb.AddForce(force / velocity, ForceMode.Force); //A�adir a aca que el rb use la gravedad (para que se active al dispararse)
-        //rb.AddTorque(transform.right * torque);
+        rb.AddForce(force / velocity, ForceMode.Force);
         /* source = GetComponent<Cinemachine.CinemachineImpulseSource>();
         source.GenerateImpulse(Camera.main.transform.forward); */ // Seria una especie de recoil. Para ajustarlo mejor ir a su componente en el prefab
         GetComponent<CapsuleCollider>().enabled = true;
