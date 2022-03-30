@@ -19,7 +19,7 @@ public class Arrow : MonoBehaviour
         GetComponent<CapsuleCollider>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
 
-        damage = 75f;
+        damage = 57f;
         velocity = 1.5f;
         torque = 2f;
     }
@@ -34,7 +34,6 @@ public class Arrow : MonoBehaviour
         GetComponent<BoxCollider>().enabled = true;
         rb.useGravity = true;
         transform.parent = null;
-        //Destroy(this.gameObject, 2);
     }
 
     private void OnCollisionEnter(Collision c1)
@@ -46,16 +45,26 @@ public class Arrow : MonoBehaviour
         {
             var enemyHealth = c1.gameObject.GetComponent<Enemy>();
             enemyHealth.DamageReceived(damage);
-            //Destroy(this.gameObject, 5);
-        }
+            transform.SetParent(c1.transform);
+            rb.isKinematic = true;
+            GetComponent<CapsuleCollider>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
 
-        if (c1.gameObject.layer != 10) // Player layer
+            Destroy(this.gameObject, 2);
+        }
+        else if (c1.gameObject.layer == 7 || c1.gameObject.layer == 6)
         {
+            transform.SetParent(c1.transform);
+            rb.isKinematic = true;
+            GetComponent<CapsuleCollider>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
         }
-
-        /* rb.velocity = Vector3.zero;
-         rb.angularVelocity = Vector3.zero;
-         transform.SetParent(c1.transform);
-         rb.isKinematic = true;*/
+        else if (c1.gameObject.layer != 10) // Player layer
+        {
+            transform.SetParent(c1.transform);
+            GetComponent<PhysicMaterial>().bounciness = 0.3f;
+            GetComponent<CapsuleCollider>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
+        }
     }
 }

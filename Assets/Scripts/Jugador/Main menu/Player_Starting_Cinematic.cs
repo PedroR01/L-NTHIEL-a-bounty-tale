@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Player_Starting_Cinematic : MonoBehaviour
 {
     [SerializeField] private GameObject finishCard;
-    [SerializeField] private Load_Next_Level levelFinishState;
 
     [SerializeField] private Start_Button starting;
     private Animator anim;
@@ -20,14 +19,10 @@ public class Player_Starting_Cinematic : MonoBehaviour
     private float timer;
     private float timeToPlay;
 
-    private void Awake()
-    {
-        if (levelFinishState.GetFinishedState())
-            finishCard.SetActive(true);
-    }
-
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+
         anim = GetComponent<Animator>();
 
         anim.SetInteger("mov_Values", 0);

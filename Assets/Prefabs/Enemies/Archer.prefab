@@ -2507,8 +2507,8 @@ MonoBehaviour:
   fieldOfView: 60
   rayMaxDistance: 20
   minDistance: 3
-  maxDistance: 20
-  maxAttackDist: 15
+  maxDistance: 30
+  maxAttackDist: 25
   stand: 1
   patrol: 0
   chase: 0

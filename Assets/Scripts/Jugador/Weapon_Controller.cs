@@ -46,8 +46,13 @@ public class Weapon_Controller : MonoBehaviour
 
             foreach (Collider enemy in golpearEnemigos)
             {
-                enemy.GetComponent<Enemy>().DamageReceived(damageM);
-                Debug.Log("Le pegaste a " + enemy.name);
+                if (enemy == null)
+                    return;
+                else
+                {
+                    enemy.GetComponent<Enemy>().DamageReceived(damageM);
+                    Debug.Log("Le pegaste a " + enemy.name);
+                }
             }
         } // Ataque a mele
     }

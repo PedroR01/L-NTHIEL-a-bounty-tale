@@ -16,4 +16,4 @@ MonoBehaviour:
   life: 100
   armour: 9
   damage: 12
-  speed: 3.5
+  speed: 7

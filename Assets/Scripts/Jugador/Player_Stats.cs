@@ -198,7 +198,7 @@ public class Player_Stats : MonoBehaviour
             actualTimeStamina -= Time.deltaTime;
             if (actualTimeStamina <= 0)
             {
-                actualStamina += 5f * (Time.deltaTime / 2);
+                actualStamina += 5f * Time.deltaTime;
             }
         }
         else if (lastStaminaValue == actualStamina)

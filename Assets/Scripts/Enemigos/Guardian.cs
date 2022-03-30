@@ -8,7 +8,7 @@ public class Guardian : Enemy
     {
         damageTakedCheck = false;
         EnemyStats();
-        maxAttackDist = minDistance;
+        maxAttackDist = minDistance + 1.5f;
         if (shouldPatrol)
         {
             ChangePatrolState();

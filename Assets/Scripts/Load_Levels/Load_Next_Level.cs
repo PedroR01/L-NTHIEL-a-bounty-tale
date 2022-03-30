@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Load_Next_Level : MonoBehaviour
 {
     protected Scene actualScene;
     private Player_Data sendData;
-    private bool finished;
 
     private void Start()
     {
@@ -36,17 +36,18 @@ public class Load_Next_Level : MonoBehaviour
 
         if (other.gameObject.layer == 10 && actualScene.name == "Castle_Level3")
         {
-            GameObject _manager = FindObjectOfType<Game_Manager>().gameObject;
-            GameObject _hud = FindObjectOfType<Inventory_Ui>().gameObject;
-            Destroy(_manager);
-            Destroy(_hud);
-            SceneManager.LoadScene("Main Menu");
+            StartCoroutine(WaitToLoad());
         }
     }
 
-    public bool GetFinishedState()
+    private IEnumerator WaitToLoad()
     {
-        return finished;
+        yield return new WaitForSeconds(5);
+        GameObject _manager = FindObjectOfType<Game_Manager>().gameObject;
+        GameObject _hud = FindObjectOfType<Inventory_Ui>().gameObject;
+        Destroy(_manager);
+        Destroy(_hud);
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void OnQuit()

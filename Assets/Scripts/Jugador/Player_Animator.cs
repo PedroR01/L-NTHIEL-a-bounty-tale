@@ -69,7 +69,11 @@ public class Player_Animator : MonoBehaviour
                 anim.SetTrigger("jump");
             }
 
-            if (Input.GetKey(KeyCode.LeftShift) && stats.canUseStamina || Input.GetKey(KeyCode.RightShift) && stats.canUseStamina)
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                anim.SetTrigger("punch");
+            }
+            else if (Input.GetKey(KeyCode.LeftShift) && stats.canUseStamina || Input.GetKey(KeyCode.RightShift) && stats.canUseStamina)
             {
                 anim.SetBool("walking", false);
                 anim.SetBool("running", true);

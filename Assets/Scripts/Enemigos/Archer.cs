@@ -39,7 +39,12 @@ public class Archer : Enemy
     protected void Attack()
     {
         Rotation(DirectionToObjective());
-        if (ObjectiveDistance() < maxAttackDist && CanAttack())
+        if (ObjectiveDistance() > maxAttackDist)
+        {
+            attack = false;
+            chase = true;
+        }
+        else if (CanAttack())
         {
             Rigidbody rb = Instantiate(prefab, prefabSpawn.position, prefabSpawn.rotation).GetComponent<Rigidbody>();
             Debug.Log("Distancia al objetivo: " + ObjectiveDistance());

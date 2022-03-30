@@ -36,8 +36,8 @@ public class PlayerController : MonoBehaviour
     // Relacionado a la ejecucion del sonido
 
     private bool notWalkSound;
-    private float walkDistance = 0.7f;
-    private float sprintDistance = 0.35f;
+    private float walkDistance = 0.3f;
+    private float sprintDistance = 0.1f;
     private float crouchDistance = 0.8f;
     // private float sprintVolume = 1f;
     // private float crouchVolume = 0.1f;
@@ -98,10 +98,10 @@ public class PlayerController : MonoBehaviour
         Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
         float inputMagnitude = Mathf.Clamp01(movementDirection.magnitude);
 
-        if (Input.GetKey(KeyCode.LeftShift) && stats.canUseStamina || Input.GetKey(KeyCode.RightShift) && stats.canUseStamina) // Re ver despues si hace falta sacar el sprint o el agachado
+        if (Input.GetKey(KeyCode.LeftShift) && stats.canUseStamina || Input.GetKey(KeyCode.RightShift) && stats.canUseStamina)
         {
             inputMagnitude *= 2f;
-            stats.timeRecovering = false; // Esto aca me da la pinta de que esta mal, pero no se me ocurrio por ahora otra manera de solucionarlo
+            stats.timeRecovering = false;
             stats.actualStamina -= 10f * Time.deltaTime;
         }
         else if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
             lastGroundedTime = Time.time;
         }
 
-        if (Input.GetButtonDown("Jump")) // Remplazar la mecanica de salto por la de dodgeo despues
+        if (Input.GetButtonDown("Jump"))
         {
             jumpButtonPressedTime = Time.time;
         }
