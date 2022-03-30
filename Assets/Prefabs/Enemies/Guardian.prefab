@@ -830,12 +830,12 @@ Rigidbody:
   m_GameObject: {fileID: 1429961289117329304}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1.5
-  m_AngularDrag: 1.5
+  m_Drag: 10
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!136 &6214128260271018510
 CapsuleCollider:
@@ -883,6 +883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 119d9d538be7a6f4fa48a920c391617d, type: 2}
+  actualLife: 0
   damage: 0
   shouldPatrol: 0
   patrolScript: {fileID: 1975395582}
@@ -894,7 +895,7 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 98432
-  fieldOfView: 22
+  fieldOfView: 60
   rayMaxDistance: 20
   minDistance: 3
   maxDistance: 20

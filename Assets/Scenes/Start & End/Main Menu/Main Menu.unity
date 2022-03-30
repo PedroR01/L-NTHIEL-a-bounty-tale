@@ -279,7 +279,7 @@ MonoBehaviour:
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2074,7 +2074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df29c24d480871543b5594599fb4202f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameFinished: 0
 --- !u!1 &450200621
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,7 +2154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishCard: {fileID: 234079507}
-  finished: {fileID: 393441222}
+  levelFinishState: {fileID: 393441222}
   starting: {fileID: 1198404143}
   clips:
   - {fileID: 8300000, guid: 5c9bdbce37b06a24fa6ea793bcfd1907, type: 3}

@@ -30,7 +30,6 @@ public class Game_Manager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         gameInstance = this;
         DontDestroyOnLoad(gameObject);
     }

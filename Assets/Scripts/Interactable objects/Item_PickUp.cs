@@ -1,16 +1,39 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Item_PickUp : Interactable
+public class Item_PickUp : MonoBehaviour
 {
     [SerializeField] private Scriptable_Item item;
+    [SerializeField] protected float radius = 2.5f; // Distancia para que el player interactua
+    [SerializeField] protected Transform interactionTransform;
+    [SerializeField] private Transform player;
+    protected GameObject uiMessage;
+    protected bool inRadius;
+
+    public bool canInteract = false;
+
     //[SerializeField] private GameObject uiMessage;
 
-    protected override void Interact()
+    private void Start()
     {
-        base.Interact();
+        if (uiMessage == null)
+            uiMessage = GameObject.Find("Instructions Panel");
+    }
 
-        PickUp();
+    private void Update()
+    {
+        if (inRadius)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                PickUp();
+                canInteract = true;
+            }
+        }
+        else if (inRadius)
+        {
+            canInteract = false;
+        }
     }
 
     private void PickUp()
@@ -28,8 +51,9 @@ public class Item_PickUp : Interactable
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 10 && uiMessage.activeInHierarchy)
+        if (other.gameObject.layer == 10)
         {
+            inRadius = true;
             uiMessage.GetComponent<Image>().enabled = true;
             Text text = uiMessage.GetComponentInChildren<Text>();
             text.enabled = true;
@@ -42,12 +66,8 @@ public class Item_PickUp : Interactable
 
             if (canPickUp)
             {
-                if (item.isKey)
-                {
-                    //uiMessage.gameObject.SetActive(false);
-                    Destroy(gameObject);
-                }
-                Destroy(gameObject); // Aca hay codigo repetido, cambiarlo despues
+                inRadius = false;
+                Destroy(gameObject);
             }
         }
     }
@@ -56,13 +76,9 @@ public class Item_PickUp : Interactable
     {
         if (other.gameObject.layer == 10)
         {
-            if (!uiMessage.activeInHierarchy)
-                return;
-            else
-            {
-                uiMessage.GetComponent<Image>().enabled = false;
-                uiMessage.GetComponentInChildren<Text>().enabled = false;
-            }
+            inRadius = false;
+            uiMessage.GetComponent<Image>().enabled = false;
+            uiMessage.GetComponentInChildren<Text>().enabled = false;
         }
     }
 }

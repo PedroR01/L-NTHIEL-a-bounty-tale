@@ -12,7 +12,7 @@ public class Bow : MonoBehaviour
 
     [SerializeField] private Transform releasePoint;
 
-    public float munition;
+    public int munition;
     public float lastMunitionCheck;
 
     [SerializeField] private Weapon_Controller munitionController;
@@ -24,7 +24,7 @@ public class Bow : MonoBehaviour
 
     private void Start()
     {
-        arrayArrow = new Arrow[10];
+        arrayArrow = new Arrow[munition];
         for (int i = 0; i < arrayArrow.Length; i++)
         {
             arrayArrow[i] = Instantiate(arrowPrefab, spawnPoint);

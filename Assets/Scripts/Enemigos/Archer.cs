@@ -46,10 +46,6 @@ public class Archer : Enemy
             rb.AddForce(transform.forward * ObjectiveDistance() * 50f, ForceMode.Force);
             rb.AddForce(new Vector3(0, ObjectiveDistance() * 15f, 0), ForceMode.Force);
 
-            // rb.AddForce(transform.forward, ForceMode.Force);
-            // rb.AddForce(transform.up * 8f, ForceMode.Force);
-            //Añadir particulas para saber donde va la flecha
-
             if (CanAttack())
                 attackTimer = timeToAttack;
         }

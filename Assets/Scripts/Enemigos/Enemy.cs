@@ -83,7 +83,7 @@ public abstract class Enemy : MonoBehaviour
         else
         {
             Raycast();
-            if (patrol)
+            if (patrol && !damageTakedCheck)
             {
                 if (!patrolScript.isActiveAndEnabled)
                 {
@@ -92,10 +92,14 @@ public abstract class Enemy : MonoBehaviour
                     attack = false;
                 }
             }
-            else if (chase && !attack)
+            else if (chase && !attack || damageTakedCheck)
             {
+                if (patrolScript.isActiveAndEnabled)
+                    patrolScript.enabled = false;
+
                 stand = false;
                 patrol = false;
+                chase = true;
                 Chase();
             }
         }
@@ -104,8 +108,8 @@ public abstract class Enemy : MonoBehaviour
     private float FieldOfView()
     {
         Vector3 rayOffset = new Vector3(0, 1.3f, 0);
-        Ray ray = new Ray(transform.position + rayOffset, transform.TransformDirection(Quaternion.Euler(0, 11, 0) * Vector3.forward)); // Right side line 27y
-        Ray ray2 = new Ray(transform.position + rayOffset, transform.TransformDirection(Quaternion.Euler(0, -11, 0) * Vector3.forward)); // Left side line -19y
+        Ray ray = new Ray(transform.position + rayOffset, transform.TransformDirection(Quaternion.Euler(0, 30, 0) * Vector3.forward)); // Right side line 27y
+        Ray ray2 = new Ray(transform.position + rayOffset, transform.TransformDirection(Quaternion.Euler(0, -30, 0) * Vector3.forward)); // Left side line -19y
         Vector3 rayRange = new Vector3(ray.origin.x, ray.origin.y, ray.origin.z - rayMaxDistance);
 
         // Comente estas lineas porque no siguen el movimiento y rotacion del personaje, los ray si
@@ -156,7 +160,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (direccion != Vector3.zero)
         {
-            float velocidadGiro = 2.5f; // Esta variable cuando la pase a el otro script, ponerla arriba del start
+            float velocidadGiro = 10f;
             Quaternion rotacionObjetivo = Quaternion.LookRotation(direccion);
             transform.rotation = Quaternion.Lerp(transform.rotation, rotacionObjetivo, velocidadGiro * Time.deltaTime); // Interpola los 2 primeros valores con el ultimo y normaliza el resultado.
         }
@@ -213,7 +217,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Origin Position")
+        if (collision.gameObject.name == "Origin Position" && !patrolScript.isActiveAndEnabled)
         {
             patrol = false;
             stand = true;

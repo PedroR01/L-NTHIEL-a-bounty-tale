@@ -17,20 +17,30 @@ public class Skill_Tree_Powers : MonoBehaviour
         pController = GetComponent<PlayerController>();
     }
 
-    public void DashAbility()
+    public void DashAbility(int direction)
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
-        {
-            StartCoroutine(Dash());
-        }
+        if (direction == 1)
+            StartCoroutine(ForwardDash());
+        else if (direction == -1)
+            StartCoroutine(BackwardDash());
     }
 
-    private IEnumerator Dash()
+    private IEnumerator ForwardDash()
     {
         float startTime = Time.time; // El tiempo a partir del comienzo del frame en el que se ejecuto esta linea
         while (Time.time < startTime + dashTime)
         {
             pController.characterController.Move(pController.gameObject.transform.forward * dashSpeed * Time.deltaTime);
+            yield return null;
+        }
+    }
+
+    private IEnumerator BackwardDash()
+    {
+        float startTime = Time.time; // El tiempo a partir del comienzo del frame en el que se ejecuto esta linea
+        while (Time.time < startTime + dashTime)
+        {
+            pController.characterController.Move(pController.gameObject.transform.forward * (dashSpeed * -1) * Time.deltaTime);
             yield return null;
         }
     }

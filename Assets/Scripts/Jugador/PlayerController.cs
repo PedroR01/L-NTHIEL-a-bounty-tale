@@ -195,6 +195,15 @@ public class PlayerController : MonoBehaviour
 
     private void SpecialMoves()
     {
-        abilities.DashAbility();
+        if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.LeftAlt) && stats.actualStamina >= 20f)
+        {
+            abilities.DashAbility(1);
+            stats.actualStamina -= 20f;
+        }
+        if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.LeftAlt) && stats.actualStamina >= 20f)
+        {
+            abilities.DashAbility(-1);
+            stats.actualStamina -= 20f;
+        }
     }
 }

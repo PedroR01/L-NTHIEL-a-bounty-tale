@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Load_Next_Level : MonoBehaviour
 {
-    private Scene actualScene;
+    protected Scene actualScene;
     private Player_Data sendData;
-    public bool gameFinished;
+    private bool finished;
 
     private void Start()
     {
@@ -19,7 +19,6 @@ public class Load_Next_Level : MonoBehaviour
     {
         if (other.gameObject.layer == 10 && actualScene.name == "Main Menu")
         {
-            gameFinished = false;
             SceneManager.LoadScene("Dungeon_Level1");
         }
 
@@ -37,10 +36,17 @@ public class Load_Next_Level : MonoBehaviour
 
         if (other.gameObject.layer == 10 && actualScene.name == "Castle_Level3")
         {
-            gameFinished = true;
-            sendData.getDataBeforeLoad = true;
+            GameObject _manager = FindObjectOfType<Game_Manager>().gameObject;
+            GameObject _hud = FindObjectOfType<Inventory_Ui>().gameObject;
+            Destroy(_manager);
+            Destroy(_hud);
             SceneManager.LoadScene("Main Menu");
         }
+    }
+
+    public bool GetFinishedState()
+    {
+        return finished;
     }
 
     public void OnQuit()

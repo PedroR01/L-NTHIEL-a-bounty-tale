@@ -2439,13 +2439,13 @@ Rigidbody:
   m_GameObject: {fileID: 6618711898110426482}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 10
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!136 &6618711898110426483
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2492,6 +2492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 4c414369e06991146b5f1a1136d78631, type: 2}
+  actualLife: 0
   damage: 0
   shouldPatrol: 0
   patrolScript: {fileID: 6618711898110426494}
@@ -2503,7 +2504,7 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 98432
-  fieldOfView: 22
+  fieldOfView: 60
   rayMaxDistance: 20
   minDistance: 3
   maxDistance: 20

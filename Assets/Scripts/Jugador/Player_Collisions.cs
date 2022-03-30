@@ -30,21 +30,6 @@ public class Player_Collisions : MonoBehaviour
         {
             Debug.Log("Checkpoint saved");
         } // Pot to save checkpoint
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Vector3 rayOffset = new Vector3(0, 0.3f, 0); // Buscar alguna otra forma de obtener su componente sin usar el ray. Puede ser con un OnTrigger
-            Ray ray = new Ray(transform.position + rayOffset, transform.TransformDirection(Quaternion.Euler(0, 11, 0) * Vector3.forward)); ;
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 5))
-            {
-                Interactable interactable = hit.collider.GetComponent<Interactable>();
-                if (interactable != null && interactable.canInteract)
-                {
-                    Debug.Log("Item picked");
-                }
-            }
-        }
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)

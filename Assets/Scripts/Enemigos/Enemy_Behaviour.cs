@@ -22,7 +22,9 @@ public class Enemy_Behaviour : MonoBehaviour
 
     private void Update()
     {
-        if (enemyPatrolActivation.patrol)
+        if (enemyPatrolActivation.chase || enemyPatrolActivation.attack)
+            return;
+        else if (enemyPatrolActivation.patrol)
             Patrol();
     }
 
@@ -43,7 +45,7 @@ public class Enemy_Behaviour : MonoBehaviour
 
     private void Patrol()
     {
-        if (Vector3.Distance(transform.position, destination) < 1)
+        if (Vector3.Distance(transform.position, destination) < 0.7)
         {
             standTimer -= Time.deltaTime;
             enemyPatrolActivation.stand = true;
