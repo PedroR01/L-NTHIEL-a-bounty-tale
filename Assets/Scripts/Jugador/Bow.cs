@@ -20,7 +20,7 @@ public class Bow : MonoBehaviour
     private Arrow[] arrayArrow;
     private int arrowIndex;
     private Arrow currentArrow;
-    private bool isReloading;
+    [HideInInspector] public bool isReloading;
 
     private void Start()
     {

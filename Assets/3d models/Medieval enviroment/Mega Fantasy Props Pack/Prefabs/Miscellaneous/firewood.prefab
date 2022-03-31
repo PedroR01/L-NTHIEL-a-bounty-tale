@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3399600}
   - component: {fileID: 2319282}
   - component: {fileID: 4929606926194597311}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: firewood
   m_TagString: Untagged
   m_Icon: {fileID: 0}

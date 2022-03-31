@@ -52,7 +52,7 @@ public class Player_Animator : MonoBehaviour
                 anim.SetBool("aim", false);
             } // Animacion de apuntado y disparo.
 
-            if (Input.GetKeyDown(KeyCode.LeftAlt))
+            if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.LeftAlt) && stats.actualStamina >= 20f || Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.LeftAlt) && stats.actualStamina >= 20f)
             {
                 anim.SetInteger("mov_Values", 0);
                 anim.SetBool("walking", false);

@@ -153,12 +153,6 @@ public class Player_Stats : MonoBehaviour
 
     private void Heal()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            //actualLife -= 10;
-            actualLife = 0f;
-        }
-
         if (actualLife < maxLife)
             StartCoroutine(TimeWithoutDamage(lastLifeValue));
         if (actualLife < maxLife && timeWithoutDamage)
@@ -217,8 +211,8 @@ public class Player_Stats : MonoBehaviour
 
     private IEnumerator UpdateLife()
     {
-        yield return new WaitForSeconds(1f);
-        // Debug.Log("Corrutina 2");
+        yield return new WaitForSeconds(0.2f);
+
         lastLifeValue = actualLife; // Tuve que hacer 2 corrutinas porque sino al mezclar los distintos metodos de perdida y recuperacion, me tiraba errores.
                                     // Tal vez haya una solucion mas optima que esta
     }

@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
         #region Camera rotation based on follow object rotation
 
-        followTransform.transform.rotation *= Quaternion.AngleAxis(lookX * cameraSensivity, Vector3.down); //Up // Hacer booleano para invertir los ejes de la camara
+        followTransform.transform.rotation *= Quaternion.AngleAxis(lookX * cameraSensivity, Vector3.up); //Up // Hacer booleano para invertir los ejes de la camara
         followTransform.transform.rotation *= Quaternion.AngleAxis(lookY * cameraSensivity, Vector3.left); //Right
 
         var angles = followTransform.transform.localEulerAngles;

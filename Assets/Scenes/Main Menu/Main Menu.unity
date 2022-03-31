@@ -9504,6 +9504,7 @@ MonoBehaviour:
   munition: 20
   lastMunitionCheck: 0
   munitionController: {fileID: 4787479395798200293, guid: 3a98e60f9a3e64e449f2d70f43408776, type: 3}
+  isReloading: 0
 --- !u!1 &6610847430993431271
 GameObject:
   m_ObjectHideFlags: 0

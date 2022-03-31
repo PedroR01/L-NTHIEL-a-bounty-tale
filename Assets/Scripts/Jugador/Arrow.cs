@@ -61,8 +61,9 @@ public class Arrow : MonoBehaviour
         else if (c1.gameObject.layer != 10) // Player layer
         {
             transform.SetParent(c1.transform);
-            GetComponent<PhysicMaterial>().bounciness = 0.3f;
-            GetComponent<CapsuleCollider>().enabled = false;
+            Collider capsuleCol = GetComponent<CapsuleCollider>();
+            capsuleCol.material.bounciness = 0.2f;
+            capsuleCol.material.dynamicFriction = 0.4f;
             GetComponent<BoxCollider>().enabled = false;
         }
     }

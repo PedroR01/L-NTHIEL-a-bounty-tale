@@ -34,6 +34,7 @@ public class Quest_Item : MonoBehaviour
         Text text = uiMessage.GetComponentInChildren<Text>();
         uiMessage.GetComponent<Image>().enabled = true;
         text.enabled = true;
+        text.fontSize = 50;
         text.text = "ESCAPE NOW! THE GUARDS ARE AFTER YOU";
         //uiMessage.gameObject.SetActive(true);
         canLeave.enabled = true;
@@ -44,7 +45,7 @@ public class Quest_Item : MonoBehaviour
 
     private IEnumerator InstructionsTime()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         uiMessage.GetComponent<Image>().enabled = false;
         uiMessage.GetComponentInChildren<Text>().enabled = false;
         //uiMessage.gameObject.SetActive(false);

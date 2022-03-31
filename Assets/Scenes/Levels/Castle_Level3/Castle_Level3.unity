@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: box.001
       objectReference: {fileID: 0}
+    - target: {fileID: 134776, guid: b6782772acd9f1940a6d3fd9e7d473a1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 435614, guid: b6782772acd9f1940a6d3fd9e7d473a1, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1102,6 +1106,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: books.003
       objectReference: {fileID: 0}
+    - target: {fileID: 117538, guid: 7ab3bb1a444b7f849b92f502efa88149, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 449598, guid: 7ab3bb1a444b7f849b92f502efa88149, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1163,6 +1171,10 @@ PrefabInstance:
     - target: {fileID: 180812, guid: 2109f9c31f22b2b438ccf814600ff572, type: 3}
       propertyPath: m_Name
       value: box.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 180812, guid: 2109f9c31f22b2b438ccf814600ff572, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 443730, guid: 2109f9c31f22b2b438ccf814600ff572, type: 3}
       propertyPath: m_RootOrder
@@ -2331,6 +2343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wood_wall.000
       objectReference: {fileID: 0}
+    - target: {fileID: 192810, guid: 0e8932223c9ece344888d3b7fcadbe51, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 466446, guid: 0e8932223c9ece344888d3b7fcadbe51, type: 3}
       propertyPath: m_RootOrder
       value: 151
@@ -2536,7 +2552,7 @@ GameObject:
   - component: {fileID: 271932041}
   - component: {fileID: 271932040}
   - component: {fileID: 271932042}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: book.001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2754,6 +2770,10 @@ PrefabInstance:
     - target: {fileID: 160540, guid: d24cbc466424f71408559463ee47e0cf, type: 3}
       propertyPath: m_Name
       value: wood_wall.009 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 160540, guid: d24cbc466424f71408559463ee47e0cf, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 482608, guid: d24cbc466424f71408559463ee47e0cf, type: 3}
       propertyPath: m_RootOrder
@@ -2998,7 +3018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 317694357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boxes & Barrels 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3591,7 +3611,7 @@ GameObject:
   - component: {fileID: 387541778}
   - component: {fileID: 387541777}
   - component: {fileID: 387541779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: book.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4103,18 +4123,6 @@ PrefabInstance:
     - target: {fileID: 436280, guid: edb0d94010558614c976dfa15f61dee3, type: 3}
       propertyPath: m_RootOrder
       value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 436280, guid: edb0d94010558614c976dfa15f61dee3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.9230851
-      objectReference: {fileID: 0}
-    - target: {fileID: 436280, guid: edb0d94010558614c976dfa15f61dee3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.9998926
-      objectReference: {fileID: 0}
-    - target: {fileID: 436280, guid: edb0d94010558614c976dfa15f61dee3, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.89
       objectReference: {fileID: 0}
     - target: {fileID: 436280, guid: edb0d94010558614c976dfa15f61dee3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4882,7 +4890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 529181007}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Small Library 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5728,6 +5736,10 @@ PrefabInstance:
     - target: {fileID: 160540, guid: d24cbc466424f71408559463ee47e0cf, type: 3}
       propertyPath: m_Name
       value: wood_wall.009 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 160540, guid: d24cbc466424f71408559463ee47e0cf, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 482608, guid: d24cbc466424f71408559463ee47e0cf, type: 3}
       propertyPath: m_RootOrder
@@ -6686,6 +6698,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wood_wall_enter.005
       objectReference: {fileID: 0}
+    - target: {fileID: 144084, guid: a8dcfb7f30f956445b28c2064fd4ea4d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 411480, guid: a8dcfb7f30f956445b28c2064fd4ea4d, type: 3}
       propertyPath: m_RootOrder
       value: 150
@@ -7572,7 +7588,7 @@ GameObject:
   - component: {fileID: 852448547}
   - component: {fileID: 853415907}
   - component: {fileID: 855410980}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: barrel.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7744,7 +7760,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 878226054}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Big Library 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7782,6 +7798,10 @@ PrefabInstance:
     - target: {fileID: 156040, guid: d3afa6c03e4ec924aa1fb5b97a490374, type: 3}
       propertyPath: m_Name
       value: books.006 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 156040, guid: d3afa6c03e4ec924aa1fb5b97a490374, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 451196, guid: d3afa6c03e4ec924aa1fb5b97a490374, type: 3}
       propertyPath: m_RootOrder
@@ -8232,6 +8252,10 @@ PrefabInstance:
     - target: {fileID: 196318, guid: bd0681bf08f5abb40b50c57331267663, type: 3}
       propertyPath: m_Name
       value: barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 196318, guid: bd0681bf08f5abb40b50c57331267663, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 452992, guid: bd0681bf08f5abb40b50c57331267663, type: 3}
       propertyPath: m_RootOrder
@@ -8919,6 +8943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrel.001
       objectReference: {fileID: 0}
+    - target: {fileID: 175994, guid: cc5bbe9f0660748459e20869e0e46794, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 437016, guid: cc5bbe9f0660748459e20869e0e46794, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -8982,7 +9010,7 @@ GameObject:
   - component: {fileID: 1031574037}
   - component: {fileID: 1030607061}
   - component: {fileID: 1028607510}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: box.001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9061,7 +9089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1042850311}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Books Order 3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9095,6 +9123,10 @@ PrefabInstance:
     - target: {fileID: 102506, guid: df65e9477dab36446b8bd1baef665122, type: 3}
       propertyPath: m_Name
       value: books.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 102506, guid: df65e9477dab36446b8bd1baef665122, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 466876, guid: df65e9477dab36446b8bd1baef665122, type: 3}
       propertyPath: m_RootOrder
@@ -9157,6 +9189,10 @@ PrefabInstance:
     - target: {fileID: 102506, guid: df65e9477dab36446b8bd1baef665122, type: 3}
       propertyPath: m_Name
       value: books.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 102506, guid: df65e9477dab36446b8bd1baef665122, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 466876, guid: df65e9477dab36446b8bd1baef665122, type: 3}
       propertyPath: m_RootOrder
@@ -9494,6 +9530,10 @@ PrefabInstance:
     - target: {fileID: 197012, guid: 2c82fab4131a792468a3dc363145de9b, type: 3}
       propertyPath: m_Name
       value: books (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 197012, guid: 2c82fab4131a792468a3dc363145de9b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 416000, guid: 2c82fab4131a792468a3dc363145de9b, type: 3}
       propertyPath: m_RootOrder
@@ -10016,6 +10056,10 @@ PrefabInstance:
     - target: {fileID: 176254, guid: 3e59b712796667444b27e9710346fb11, type: 3}
       propertyPath: m_Name
       value: books.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 176254, guid: 3e59b712796667444b27e9710346fb11, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 483690, guid: 3e59b712796667444b27e9710346fb11, type: 3}
       propertyPath: m_RootOrder
@@ -11888,7 +11932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1263776454}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Books Oreder 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11924,6 +11968,10 @@ PrefabInstance:
     - target: {fileID: 160540, guid: d24cbc466424f71408559463ee47e0cf, type: 3}
       propertyPath: m_Name
       value: wood_wall.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 160540, guid: d24cbc466424f71408559463ee47e0cf, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 482608, guid: d24cbc466424f71408559463ee47e0cf, type: 3}
       propertyPath: m_RootOrder
@@ -12205,7 +12253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1302154027}
-  m_Layer: 9
+  m_Layer: 18
   m_Name: Position(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12378,7 +12426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1331858720}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Books Order 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12453,7 +12501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1349008133}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Books Order 3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12859,7 +12907,7 @@ GameObject:
   - component: {fileID: 1367844032}
   - component: {fileID: 1368843776}
   - component: {fileID: 1370781889}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: barrel.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13032,6 +13080,10 @@ PrefabInstance:
     - target: {fileID: 192810, guid: 0e8932223c9ece344888d3b7fcadbe51, type: 3}
       propertyPath: m_Name
       value: wood_wall.000 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 192810, guid: 0e8932223c9ece344888d3b7fcadbe51, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 466446, guid: 0e8932223c9ece344888d3b7fcadbe51, type: 3}
       propertyPath: m_RootOrder
@@ -13392,6 +13444,10 @@ PrefabInstance:
     - target: {fileID: 9208406212441591716, guid: 6a38eb492832e0f408d388e79bbaf5ae, type: 3}
       propertyPath: m_LocalPosition.y
       value: 5.941
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208406212501847862, guid: 6a38eb492832e0f408d388e79bbaf5ae, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9208406212528324255, guid: 6a38eb492832e0f408d388e79bbaf5ae, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13915,6 +13971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrel.001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 175994, guid: cc5bbe9f0660748459e20869e0e46794, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 437016, guid: cc5bbe9f0660748459e20869e0e46794, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -13975,7 +14035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1487676120}
-  m_Layer: 9
+  m_Layer: 18
   m_Name: Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14087,6 +14147,10 @@ PrefabInstance:
     - target: {fileID: 117538, guid: 7ab3bb1a444b7f849b92f502efa88149, type: 3}
       propertyPath: m_Name
       value: books.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 117538, guid: 7ab3bb1a444b7f849b92f502efa88149, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 449598, guid: 7ab3bb1a444b7f849b92f502efa88149, type: 3}
       propertyPath: m_RootOrder
@@ -14230,6 +14294,10 @@ PrefabInstance:
     - target: {fileID: 117538, guid: 7ab3bb1a444b7f849b92f502efa88149, type: 3}
       propertyPath: m_Name
       value: books.003 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 117538, guid: 7ab3bb1a444b7f849b92f502efa88149, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 449598, guid: 7ab3bb1a444b7f849b92f502efa88149, type: 3}
       propertyPath: m_RootOrder
@@ -16048,6 +16116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: books.006
       objectReference: {fileID: 0}
+    - target: {fileID: 156040, guid: d3afa6c03e4ec924aa1fb5b97a490374, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 451196, guid: d3afa6c03e4ec924aa1fb5b97a490374, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -17036,10 +17108,6 @@ PrefabInstance:
     - target: {fileID: 103942, guid: 0c193cda4d1652a4985c0bd1a14f6a28, type: 3}
       propertyPath: m_Name
       value: fork
-      objectReference: {fileID: 0}
-    - target: {fileID: 103942, guid: 0c193cda4d1652a4985c0bd1a14f6a28, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 447006, guid: 0c193cda4d1652a4985c0bd1a14f6a28, type: 3}
       propertyPath: m_RootOrder
@@ -18538,6 +18606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: books.006
       objectReference: {fileID: 0}
+    - target: {fileID: 156040, guid: d3afa6c03e4ec924aa1fb5b97a490374, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 451196, guid: d3afa6c03e4ec924aa1fb5b97a490374, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -19639,6 +19711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: books
       objectReference: {fileID: 0}
+    - target: {fileID: 197012, guid: 2c82fab4131a792468a3dc363145de9b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 416000, guid: 2c82fab4131a792468a3dc363145de9b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -19700,6 +19776,10 @@ PrefabInstance:
     - target: {fileID: 181198, guid: 76328f94bad4e8c4bb5263a9f86a09b4, type: 3}
       propertyPath: m_Name
       value: wood_wall_enter.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 181198, guid: 76328f94bad4e8c4bb5263a9f86a09b4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 403674, guid: 76328f94bad4e8c4bb5263a9f86a09b4, type: 3}
       propertyPath: m_RootOrder
@@ -19884,15 +19964,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8518421424552955228, guid: aa30b401f3264b44bb96caf4240fa2c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.33681098
+      value: -0.3365271
       objectReference: {fileID: 0}
     - target: {fileID: 8518421424552955228, guid: aa30b401f3264b44bb96caf4240fa2c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000029040143
+      value: -0.00000030607558
       objectReference: {fileID: 0}
     - target: {fileID: 8518421424552955228, guid: aa30b401f3264b44bb96caf4240fa2c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6503751
+      value: -1.6504749
       objectReference: {fileID: 0}
     - target: {fileID: 8518421424552955229, guid: aa30b401f3264b44bb96caf4240fa2c9, type: 3}
       propertyPath: m_Follow
@@ -19920,23 +20000,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8518421424876516511, guid: aa30b401f3264b44bb96caf4240fa2c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.772343
+      value: -2.7725875
       objectReference: {fileID: 0}
     - target: {fileID: 8518421424876516511, guid: aa30b401f3264b44bb96caf4240fa2c9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7187564
+      value: 0.7186451
       objectReference: {fileID: 0}
     - target: {fileID: 8518421424876516511, guid: aa30b401f3264b44bb96caf4240fa2c9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000011319547
+      value: 0.000000014729509
       objectReference: {fileID: 0}
     - target: {fileID: 8518421424876516511, guid: aa30b401f3264b44bb96caf4240fa2c9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.695262
+      value: 0.69537705
       objectReference: {fileID: 0}
     - target: {fileID: 8518421424876516511, guid: aa30b401f3264b44bb96caf4240fa2c9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000010949542
+      value: -0.000000014252605
       objectReference: {fileID: 0}
     - target: {fileID: 8518421424876516511, guid: aa30b401f3264b44bb96caf4240fa2c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

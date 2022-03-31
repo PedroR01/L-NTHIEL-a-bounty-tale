@@ -224,13 +224,4 @@ public abstract class Enemy : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
     }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        /*if (collision.gameObject.name == "Origin Position") // Intento de hacer que al recibir daño sin haber avistado al jugador
-        {                                                     // se dirija a buscarlo igualmente.
-            if (damageTakedCheck && !chase)
-                StartCoroutine(returnToPlace());
-        }*/
-    }
 }

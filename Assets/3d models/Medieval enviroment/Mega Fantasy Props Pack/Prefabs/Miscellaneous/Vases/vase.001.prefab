@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3311704}
   - component: {fileID: 2339614}
   - component: {fileID: 6323766096222901278}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: vase.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

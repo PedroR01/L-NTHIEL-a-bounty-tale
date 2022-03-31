@@ -6,6 +6,7 @@ public class Player_Audio : MonoBehaviour
 {
     private CharacterController cc;
     private AudioSource audioSource;
+    [SerializeField] private Bow reloadTimer;
     [SerializeField] private AudioClip[] clips;
     private AudioClip clip;
 
@@ -35,13 +36,13 @@ public class Player_Audio : MonoBehaviour
             audioSource.PlayOneShot(clip);
         }
 
-        if (Input.GetMouseButtonDown(1) && Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(1) && Input.GetMouseButtonDown(0) && !reloadTimer.isReloading)
         {
             clip = GetRandomClip(5, 6);
             audioSource.PlayOneShot(clip);
         }
 
-        if (Input.GetMouseButton(1) && Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButton(1) && Input.GetMouseButtonUp(0) && !reloadTimer.isReloading)
         {
             clip = GetRandomClip(7, 8);
             audioSource.PlayOneShot(clip);
