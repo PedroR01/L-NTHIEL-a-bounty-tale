@@ -9,7 +9,7 @@ public class Load_Next_Level : MonoBehaviour
     protected Scene actualScene;
     private Player_Data sendData;
 
-    private void Start()
+    private void Awake()
     {
         actualScene = SceneManager.GetActiveScene();
         sendData = FindObjectOfType<Player_Data>();

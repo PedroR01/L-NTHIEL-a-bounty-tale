@@ -16,6 +16,6 @@ public class Start_Button : MonoBehaviour
     {
         start_Cinematic = true;
         Cursor.lockState = CursorLockMode.Locked;
-        GameObject.Find("Canvas").gameObject.SetActive(false);
+        GameObject.Find("HUD").gameObject.SetActive(false);
     }
 }
