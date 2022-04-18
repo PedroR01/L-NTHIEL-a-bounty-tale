@@ -80,6 +80,9 @@ public class Enemy_Audio : MonoBehaviour
 
     private void Footsteps()
     {
+        if (timeToPlay > 0.5f)
+            timeToPlay = timer;
+
         timeToPlay -= Time.deltaTime;
         if (timeToPlay <= 0)
         {

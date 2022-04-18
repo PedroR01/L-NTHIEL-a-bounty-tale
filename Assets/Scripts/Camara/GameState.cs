@@ -61,7 +61,6 @@ public class GameState : MonoBehaviour
     private void Restart()
     {
         gameOver = false;
-
         //camara apuntando al personaje
         //efecto de postprocesado para cambiar colores al morir
 

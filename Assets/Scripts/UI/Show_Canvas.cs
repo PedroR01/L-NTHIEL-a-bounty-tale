@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class Show_Canvas : MonoBehaviour
 {
+    public static Show_Canvas hudInstance;
+
     [SerializeField] private Player_Stats stats_Timer;
 
     private void Awake()
     {
+        if (hudInstance != null && hudInstance != this) // Hice esto porque se me generaban 2 huds al volver a cargar el nivel 1
+        {
+            Destroy(gameObject);
+            return;
+        }
+        hudInstance = this;
+        DontDestroyOnLoad(gameObject);
+        /*
         if (this != null)
             DontDestroyOnLoad(this);
+        */
         if (stats_Timer == null)
             stats_Timer = FindObjectOfType<Player_Stats>();
     }

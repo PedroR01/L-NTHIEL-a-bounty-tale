@@ -28,6 +28,12 @@ public class Player_Data : MonoBehaviour
 
     private void Update()
     {
+        if (playerData == null)
+            playerData = FindObjectOfType<Player_Stats>();
+
+        if (arrowData == null)
+            arrowData = FindObjectOfType<Bow>();
+
         if (getDataBeforeLoad) //booleano pra cuando este por pasar de nivel
         {
             lifeData = playerData.lastLifeValue;

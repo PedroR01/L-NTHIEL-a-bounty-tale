@@ -83,7 +83,7 @@ public class Guardian : Enemy
             Debug.Log("Vida actual del player" + objStats.GetComponent<Player_Stats>().actualLife + " Danio hecho: " + damage);
             attackTimer = timeToAttack;
         }
-        if (other.gameObject.name == "Origin Position" && !patrolScript.isActiveAndEnabled)
+        if (other.gameObject.name == "Origin Position" && !patrolScript.isActiveAndEnabled && !chase)
         {
             patrol = false;
             stand = true;

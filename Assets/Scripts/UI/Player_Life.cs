@@ -21,6 +21,8 @@ public class Player_Life : MonoBehaviour
 
         if (life.lastLifeValue != life.actualLife)
             UpdateLife();
+        else if (lifeBar.fillAmount == 0 && life.lastLifeValue == life.maxLife)
+            UpdateLife();
     }
 
     private void UpdateLife()

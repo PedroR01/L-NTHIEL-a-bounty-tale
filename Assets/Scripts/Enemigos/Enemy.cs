@@ -129,7 +129,7 @@ public abstract class Enemy : MonoBehaviour
         return direccion;
     }
 
-    private void Raycast()
+    private void Raycast() // Segun documentacion de unity, es mejor usarlo en fixedUpdate
     {
         FieldOfView();
         RaycastHit hit;
@@ -145,7 +145,7 @@ public abstract class Enemy : MonoBehaviour
                     if (!attack)
                         chase = true;
                 }
-                else if (hit.collider.tag == "Obstacle")
+                else if (hit.collider.tag == "Obstacle") // && chase
                     patrol = true;
             }
         }
