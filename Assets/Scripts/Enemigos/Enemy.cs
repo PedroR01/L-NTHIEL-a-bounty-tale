@@ -16,7 +16,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected float timeToAttack, attackTimer;
     [SerializeField] protected bool shouldPatrol;
-    [SerializeField] private Enemy_Behaviour patrolScript;
+    [SerializeField] protected Enemy_Behaviour patrolScript;
     public Transform originPosition;
     public Transform objective;
     [SerializeField] private LayerMask targetLayer;
@@ -212,16 +212,6 @@ public abstract class Enemy : MonoBehaviour
         {
             damageTakedCheck = false;
             patrol = true;
-        }
-    }
-
-    protected void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Origin Position" && !patrolScript.isActiveAndEnabled)
-        {
-            patrol = false;
-            stand = true;
-            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
     }
 }

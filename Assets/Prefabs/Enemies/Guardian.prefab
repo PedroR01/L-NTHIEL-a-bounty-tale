@@ -43,7 +43,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.1369717, y: 0.499, z: 2.37}
-  m_Center: {x: 0.2825021, y: -0.069121614, z: 1.328202}
+  m_Center: {x: 0.28249604, y: -0.056503687, z: 1.1763141}
 --- !u!1 &19699863903309997
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +746,7 @@ GameObject:
   - component: {fileID: 1975395594}
   - component: {fileID: 1429961289117329305}
   - component: {fileID: 1429961289117329309}
+  - component: {fileID: 8767280989900468679}
   - component: {fileID: 6214128260271018510}
   - component: {fileID: 1975395582}
   - component: {fileID: 886820368}
@@ -837,6 +838,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!136 &8767280989900468679
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429961289117329304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.7
+  m_Height: 2.7
+  m_Direction: 1
+  m_Center: {x: 0.1, y: 0.7, z: 0.07}
 --- !u!136 &6214128260271018510
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -897,7 +912,7 @@ MonoBehaviour:
     m_Bits: 98432
   fieldOfView: 60
   rayMaxDistance: 20
-  minDistance: 3
+  minDistance: 1.8
   maxDistance: 20
   maxAttackDist: 0
   stand: 0

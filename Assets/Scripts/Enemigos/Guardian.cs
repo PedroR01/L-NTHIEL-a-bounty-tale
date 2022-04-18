@@ -75,13 +75,19 @@ public class Guardian : Enemy
         attack = false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 10 && CanAttack())
         {
             objStats.GetComponent<Player_Stats>().RecibirDanio(damage);
             Debug.Log("Vida actual del player" + objStats.GetComponent<Player_Stats>().actualLife + " Danio hecho: " + damage);
             attackTimer = timeToAttack;
+        }
+        if (other.gameObject.name == "Origin Position" && !patrolScript.isActiveAndEnabled)
+        {
+            patrol = false;
+            stand = true;
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
     }
 }

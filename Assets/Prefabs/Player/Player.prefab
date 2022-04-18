@@ -2142,7 +2142,7 @@ MonoBehaviour:
   bow: {fileID: 6610696455382659165}
   maxFirePower: 3000
   firePower: 0
-  firePowerSpeed: 700
+  firePowerSpeed: 2200
   rotationSpeed: 5
   minRotation: -50
   maxRotation: 50

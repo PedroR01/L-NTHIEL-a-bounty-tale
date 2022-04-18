@@ -75,4 +75,14 @@ public class Archer : Enemy
         Destroy(GetComponent<CapsuleCollider>());
         Destroy(this);
     }
+
+    protected void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Origin Position" && !patrolScript.isActiveAndEnabled)
+        {
+            patrol = false;
+            stand = true;
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+    }
 }

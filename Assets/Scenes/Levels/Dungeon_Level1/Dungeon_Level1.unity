@@ -9645,7 +9645,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116524031}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.63079476, y: 0.8399845, z: 0.38819122}
@@ -15918,7 +15918,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904973469}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.63079476, y: 0.8399845, z: 0.38819122}
@@ -19122,37 +19122,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 543450652416382557}
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: fieldOfView
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: minDistance
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: originPosition
       value: 
       objectReference: {fileID: 1904973470}
-    - target: {fileID: 1798759628, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: m_Size.y
-      value: 0.499
-      objectReference: {fileID: 0}
-    - target: {fileID: 1798759628, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: m_Size.z
-      value: 2.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 1798759628, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: m_Center.x
-      value: 0.28249604
-      objectReference: {fileID: 0}
-    - target: {fileID: 1798759628, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: m_Center.y
-      value: -0.056503687
-      objectReference: {fileID: 0}
-    - target: {fileID: 1798759628, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: m_Center.z
-      value: 1.1763141
-      objectReference: {fileID: 0}
     - target: {fileID: 1975395582, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: wayPoints.Array.data[0]
       value: 
@@ -19176,26 +19148,6 @@ PrefabInstance:
     - target: {fileID: 1429961289117329304, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: m_Name
       value: Guardian
-      objectReference: {fileID: 0}
-    - target: {fileID: 1429961289117329309, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: m_Drag
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1429961289117329309, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: m_AngularDrag
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1429961289117329309, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
-    - target: {fileID: 1429961289117329309, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1429961289117329309, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1771021431242865954, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: m_RootOrder
@@ -19642,10 +19594,6 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1590782452}
-    - target: {fileID: 4787479395798200293, guid: 3a98e60f9a3e64e449f2d70f43408776, type: 3}
-      propertyPath: firePowerSpeed
-      value: 2200
-      objectReference: {fileID: 0}
     - target: {fileID: 6262297014273097474, guid: 3a98e60f9a3e64e449f2d70f43408776, type: 3}
       propertyPath: m_Name
       value: Player

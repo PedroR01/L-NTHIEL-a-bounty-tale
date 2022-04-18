@@ -45,18 +45,18 @@ public class Arrow : MonoBehaviour
             var enemyHealth = c1.gameObject.GetComponent<Enemy>();
             enemyHealth.DamageReceived(damage);
             transform.SetParent(c1.transform);
-            rb.isKinematic = true;
             GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<BoxCollider>().enabled = false;
+            rb.isKinematic = true;
 
             Destroy(this.gameObject, 2);
         }
         else if (c1.gameObject.layer == 7 || c1.gameObject.layer == 6)
         {
             transform.SetParent(c1.transform);
-            rb.isKinematic = true;
             GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<BoxCollider>().enabled = false;
+            rb.isKinematic = true;
         }
         else if (c1.gameObject.layer != 10) // Player layer
         {
