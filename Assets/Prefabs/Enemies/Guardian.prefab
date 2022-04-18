@@ -913,10 +913,10 @@ MonoBehaviour:
   fieldOfView: 60
   rayMaxDistance: 20
   minDistance: 1.8
-  maxDistance: 20
+  maxDistance: 21
   maxAttackDist: 0
-  stand: 0
-  patrol: 1
+  stand: 1
+  patrol: 0
   chase: 0
   attack: 0
   dead: 0

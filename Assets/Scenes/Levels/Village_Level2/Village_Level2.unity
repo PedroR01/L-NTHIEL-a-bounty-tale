@@ -2365,28 +2365,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1925800574}
     m_Modifications:
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: stand
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: patrol
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: objective
       value: 
       objectReference: {fileID: 1978608253}
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
+      propertyPath: maxDistance
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: originPosition
       value: 
       objectReference: {fileID: 28688891}
+    - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
+      propertyPath: rayMaxDistance
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 1429961289117329304, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: m_Name
       value: Guardian (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1429961289117329304, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1771021431242865954, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: m_RootOrder
@@ -3771,11 +3767,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: stand
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: patrol
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: objective
@@ -3783,7 +3779,7 @@ PrefabInstance:
       objectReference: {fileID: 1978608253}
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: maxDistance
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: originPosition
@@ -3791,7 +3787,7 @@ PrefabInstance:
       objectReference: {fileID: 1879344951}
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: rayMaxDistance
-      value: 30
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 1429961289117329304, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: m_Name
@@ -5267,7 +5263,7 @@ PrefabInstance:
       objectReference: {fileID: 1978608253}
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: maxDistance
-      value: 40
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: originPosition
@@ -5275,7 +5271,7 @@ PrefabInstance:
       objectReference: {fileID: 142829939}
     - target: {fileID: 886820368, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: rayMaxDistance
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1429961289117329304, guid: dd18ef9ee183cb449b39efe911d344c0, type: 3}
       propertyPath: m_Name
@@ -6680,7 +6676,7 @@ PrefabInstance:
       objectReference: {fileID: 1978608253}
     - target: {fileID: 6618711898110426495, guid: f225ccc03dea59949b050d417f4f2ba4, type: 3}
       propertyPath: maxDistance
-      value: 60
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 6618711898110426495, guid: f225ccc03dea59949b050d417f4f2ba4, type: 3}
       propertyPath: maxAttackDist
@@ -6692,7 +6688,7 @@ PrefabInstance:
       objectReference: {fileID: 504378657}
     - target: {fileID: 6618711898110426495, guid: f225ccc03dea59949b050d417f4f2ba4, type: 3}
       propertyPath: rayMaxDistance
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f225ccc03dea59949b050d417f4f2ba4, type: 3}
